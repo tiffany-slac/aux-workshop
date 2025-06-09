@@ -1,28 +1,47 @@
+# Accelerate User Experience Workshop Website
+
+Welcome to the official website for the **Accelerate UX Workshop**, a community-driven initiative focused on improving user experience (UX) and user interfaces (UI) at accelerator laboratories.
+
+This site provides information about the workshop, participating laboratories, resources for engineers and designers, and ongoing efforts to modernize UX in scientific facilities.
+
+---
+
+## What This Site Is For
+
+This web application serves as:
+- An informational hub for workshop attendees and events
+- A resource for UI/UX practices in control systems
+- A growing platform for community contributions and design thinking in accelerator facilities
+
+---
+
+## Tech Stack & Why It Was Chosen
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+| Technology     | Why It Was Used                                                                 |
+|----------------|----------------------------------------------------------------------------------|
+| **Next.js (App Router)** | Modern full-stack React framework with file-based routing and SSR for SEO-friendly content |
+| **Tailwind CSS** | Utility-first styling allows rapid prototyping and consistent design across components |
+| **TypeScript**   | Adds type safety and better developer experience |
+| **React Icons / Feather Icons** | Lightweight, scalable icons for clean visuals without external image dependencies |
+| **Image Optimization** | Next.js handles responsive images with built-in lazy loading and sizing |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run locally:
 
 ```bash
+git clone https://github.com/YOUR-ORG/accelerate-ux.git
+cd accelerate-ux
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+## Learn More about Next.js:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
