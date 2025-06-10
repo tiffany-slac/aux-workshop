@@ -9,7 +9,7 @@ const agenda = [
   {
     day: "Day 1",
     details:
-      "Kick off with introductions, overview of the workshop’s goals, and participants' mini-presentations (background, lessons, and challenges).",
+      "Kick off with introductions, overview of the workshop&apos;s goals, and participants&apos; mini-presentations (background, lessons, and challenges).",
     icon: <Users className="w-6 h-6 text-blue-600" />,
   },
   {

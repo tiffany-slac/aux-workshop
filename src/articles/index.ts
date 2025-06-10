@@ -1,6 +1,5 @@
-// src/articles/index.ts
 import Article1 from "./get-started";
-// import Article2 from "./article-2";
+import Step3 from "./step-3";
 
 export const articles = [
   {
@@ -9,10 +8,10 @@ export const articles = [
     description: "Learn how to begin using our platform.",
     Component: Article1,
   },
-  //   {
-  //     slug: "article-2",
-  //     title: "Advanced Tips",
-  //     description: "Take your workflow to the next level.",
-  //     Component: Article2,
-  //   },
+  {
+    slug: "step-3",
+    title: "Step 3: Wireframe & Iterate",
+    description: "Deep dive into Step 3 of the design process.",
+    Component: Step3,
+  },
 ];

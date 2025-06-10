@@ -6,14 +6,12 @@ interface Props {
   params: { slug: string };
 }
 
-export default function ArticlePage({ params }: Props) {
-  const article = articles.find((a) => a.slug === params.slug);
+export default async function ArticlePage({ params }: Props) {
+  // Await params
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
   if (!article) return notFound();
 
   const { Component } = article;
-  return (
-    <div className="p-6">
-      <Component />
-    </div>
-  );
+  return <Component />;
 }

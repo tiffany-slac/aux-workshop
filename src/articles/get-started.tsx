@@ -34,35 +34,35 @@ const Roadmap: React.FC = () => {
       icon: <GroupsOutlinedIcon sx={{ fontSize: 80 }} />,
       description:
         "The objectives defined are bound by the system being designed or redesigned. This establishes alignment between team members on what the outcome should accomplish.",
-      link: "#learn-more-step-1",
+      link: "/resources/step-1",
     },
     {
       title: "Step 2: Document end-user process.",
       icon: <SettingsSuggestOutlinedIcon sx={{ fontSize: 80 }} />,
       description:
         "The end-user process refers to how the objectives are achieved by those who interact with the system. This establishes a record useful for designing a better system.",
-      link: "#learn-more-step-2",
+      link: "/resources/step-2",
     },
     {
       title: "Step 3: Wireframe and iterate.",
       icon: <DesignServicesOutlinedIcon sx={{ fontSize: 80 }} />,
       description:
         "Begin designing the system using the knowledge collected. Finding errors in the design early is good and informs each iteration until issues are hard to find.",
-      link: "#learn-more-step-3",
+      link: "/resources/step-3",
     },
     {
       title: "Step 4: Invest in a high fidelity prototype and test.",
       icon: <DvrOutlinedIcon sx={{ fontSize: 80 }} />,
       description:
         "The prototype looks almost like the real thing and includes functionality. Test rigorously to ensure usability and performance expectations are met.",
-      link: "#learn-more-step-4",
+      link: "/resources/step-4",
     },
     {
       title: "Step 5: Record design decisions.",
       icon: <EditNoteOutlinedIcon sx={{ fontSize: 80 }} />,
       description:
         "Provide a record of how the design was created and why each decision was made. This supports future iterations and communicates the benefits of UX.",
-      link: "#learn-more-step-5",
+      link: "/resources/step-5",
     },
   ];
 

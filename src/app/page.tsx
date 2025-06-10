@@ -95,7 +95,7 @@ export default function HomePage() {
           <div className="text-left mb-6">
             <p className="text-lg font-bold text-[#1e88b6] mb-2">AUDIENCE</p>
             <h1 className="text-5xl font-bold text-black mb-4">
-              Who's Involved?
+              Who&apos;s Involved?
             </h1>
             <p className="text-lg text-[#333] mb-8">
               A gathering of professionals to consolidate best practices for
