@@ -80,7 +80,7 @@ export default function HomePage() {
               The Importance of UI/UX Design in Control Systems
             </h1>
             <p className="text-lg text-[#333]">
-              Taking the time to focus on UI/UX isn’t an extra step—it’s the
+              Taking the time to focus on UI/UX isn&apos;t an extra step—it&apos;s the
               foundation of success. The best technology is only as powerful as
               its usability. By prioritizing human factors, we create systems
               that work *for people*.
