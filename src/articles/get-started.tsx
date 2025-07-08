@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import React, { useState, useEffect } from "react";
 import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
@@ -67,48 +68,50 @@ const Roadmap: React.FC = () => {
   ];
 
   return (
-    <div className="roadmap">
-      {steps.map((step, index) => {
-        const isActive = activeStep === index;
-        const stepColor = stepColors[index];
+    <div className="max-w-4xl mx-auto p-8 space-y-8">
+      <div className="roadmap">
+        {steps.map((step, index) => {
+          const isActive = activeStep === index;
+          const stepColor = stepColors[index];
 
-        return (
-          <div
-            key={index}
-            className={`roadmap-step p-6 my-12 flex items-center justify-between ${
-              (index + 1) % 2 === 0 ? "flex-row-reverse" : "flex-row"
-            } transition-all duration-300 ease-in-out ${
-              isActive ? "font-bold" : "text-gray-700"
-            }`}
-            style={{ color: isActive ? stepColor : undefined }}
-          >
+          return (
             <div
-              className="w-28 h-28 rounded-full flex items-center justify-center shrink-0 border-4"
-              style={{
-                borderColor: stepColor,
-                color: stepColor,
-                backgroundColor: "transparent",
-              }}
+              key={index}
+              className={`roadmap-step p-6 my-12 flex items-center justify-between ${
+                (index + 1) % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              } transition-all duration-300 ease-in-out ${
+                isActive ? "font-bold" : "text-gray-700"
+              }`}
+              style={{ color: isActive ? stepColor : undefined }}
             >
-              {step.icon}
-            </div>
-
-            <div className="flex-1 mx-4">
-              <h2 className="text-2xl mb-2">{step.title}</h2>
-              <p className="mb-4">{step.description}</p>
-              <a
-                href={step.link}
-                className="text-sm font-medium underline"
-                style={{ color: stepColor }}
+              <div
+                className="w-28 h-28 rounded-full flex items-center justify-center shrink-0 border-4"
+                style={{
+                  borderColor: stepColor,
+                  color: stepColor,
+                  backgroundColor: "transparent",
+                }}
               >
-                Learn more about Step {index + 1} →
-              </a>
-            </div>
+                {step.icon}
+              </div>
 
-            <div className="w-1/4 h-[2px] bg-gray-300"></div>
-          </div>
-        );
-      })}
+              <div className="flex-1 mx-4">
+                <h2 className="text-2xl mb-2">{step.title}</h2>
+                <p className="mb-4">{step.description}</p>
+                <a
+                  href={step.link}
+                  className="text-sm font-medium underline"
+                  style={{ color: stepColor }}
+                >
+                  Learn more about Step {index + 1} →
+                </a>
+              </div>
+
+              <div className="w-1/4 h-[2px] bg-gray-300"></div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -139,18 +142,28 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
 // Main Article Component
 const Article1: React.FC = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-12 my-24">
-      <div
-        className="w-full h-64 bg-gray-300 mb-8 rounded-lg"
-        aria-label="Image placeholder"
-      ></div>
-
+    <div className="max-w-4xl mx-auto p-8 space-y-8">
+      <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
+        <ol className="list-none p-0 inline-flex space-x-1">
+          <li>
+            <Link href="/resources">
+              <p className="text-blue-700 hover:underline">Resources</p>
+            </Link>
+          </li>
+          <li>/</li>
+          <li className="text-gray-500">Getting Started</li>
+        </ol>
+      </nav>
       <ArticleHeader
         title="How to Get Started"
         author="AUX Team"
         date="April 30, 2025"
         readTime={5}
       />
+      <div
+        className="w-full h-64 bg-gray-300 mb-8 rounded-lg"
+        aria-label="Image placeholder"
+      ></div>
       <p className="mb-8 text-lg">
         Follow these steps to design better systems through user-centered design
         thinking.
