@@ -1,33 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Users, Edit, CheckCircle, MapPin, Calendar } from "react-feather";
+import Link from "next/link";
 
-const events = [{ id: 1, name: "2025 Accelerate UX" }];
-
-const agenda = [
+const events = [
   {
-    day: "Day 1",
-    details:
-      "Kick off with introductions, overview of the workshop&apos;s goals, and participants&apos; mini-presentations (background, lessons, and challenges).",
-    icon: <Users className="w-6 h-6 text-blue-600" />,
-  },
-  {
-    day: "Day 2",
-    details:
-      "Brainstorming groups or open sessions, white paper input, and component sketches.",
-    icon: <Edit className="w-6 h-6 text-blue-600" />,
-  },
-  {
-    day: "Day 3",
-    details:
-      "Wrap-up with next steps, goal-setting, and optional tours or excursions.",
-    icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
+    id: 1,
+    name: "2025 Accelerate UX",
+    slug: "2025",
   },
 ];
 
 export default function EventsPage() {
-  const [selectedEvent, setSelectedEvent] = useState(events[0]);
 
   return (
     <main className="bg-white min-h-screen">
@@ -42,82 +25,77 @@ export default function EventsPage() {
       </section>
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row">
-        {/* Sidebar */}
-        <aside className="lg:w-1/4 bg-gray-100 p-6 border-r w-full">
-          <h2 className="text-xl font-semibold mb-4">Events</h2>
-          <ul>
-            {events.map((event) => (
-              <li
-                key={event.id}
-                className={`p-2 rounded cursor-pointer transition ${
-                  selectedEvent.id === event.id
-                    ? "bg-blue-500 text-white"
-                    : "hover:bg-gray-200"
-                }`}
-                onClick={() => setSelectedEvent(event)}
-              >
-                {event.name}
-              </li>
-            ))}
-          </ul>
-        </aside>
+      <div>
+        <section className="p-4 border-b-2 border-t-2">
+          <p className="text-lg max-w-2xl">Upcoming Events</p>
+        </section>
 
-        {/* Main Section */}
-        <main className="lg:w-3/4 w-full p-6">
-          <h1 className="text-3xl font-bold mb-6">{selectedEvent.name}</h1>
-
-          {/* Event Info */}
-          <section className="mb-8 flex flex-wrap gap-6 text-gray-700">
-            <div className="flex items-center">
-              <MapPin className="w-5 h-5 text-blue-600" />
-              <span className="ml-2">Hosted at SLAC</span>
+        <section className="p-6 space-y-10">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-4 rounded-lg">
+            <div className="w-full md:w-1/6 text-center">
+              <p className="text-lg font-bold">2026</p>
+              <p className="text-2xl uppercase text-gray-600">TBA</p>
             </div>
-            <div className="flex items-center">
-              <Calendar className="w-5 h-5 text-blue-600" />
-              <span className="ml-2">February 26–28, 2025</span>
+            <div className="w-full md:w-1/3">
+              <img
+                src="https://www.science.org/do/10.1126/science.aal1042/full/iStock-495689014_16x9-1644908617563.jpg"
+                alt="Event"
+                className="w-full h-auto rounded-lg object-cover"
+              />
             </div>
-          </section>
-
-          {/* Agenda */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Agenda</h2>
-            <p className="text-gray-600 mb-4">
-              Explore a full-day schedule packed with keynote talks, interactive
-              sessions, and networking opportunities.
-            </p>
-            <div className="flex flex-col space-y-4">
-              {agenda.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start p-4 border rounded shadow-sm hover:shadow-md transition-shadow duration-300 bg-white"
+            <div className="w-full md:w-1/2 space-y-2">
+              <h2 className="text-xl font-semibold">Workshop</h2>
+              <h3 className="text-md text-gray-500">TBA</h3>
+              <p className="text-sm text-gray-600">Address</p>
+              <p className="text-sm text-gray-700">
+                This is a brief summary of the event. It highlights what the
+                event was about and its key moments.
+              </p>
+              <Link
+                  href={`/events/2026`}
+                  className="mt-2 text-blue-600 hover:underline font-medium inline-block"
                 >
-                  <div className="mr-4">{item.icon}</div>
-                  <div>
-                    <h3 className="text-lg font-semibold">{item.day}</h3>
-                    <p className="text-gray-600">{item.details}</p>
-                  </div>
-                </div>
-              ))}
+                  View Event Details →
+                </Link>
             </div>
-          </section>
+          </div>
+        </section>
+        <section className="p-4 border-b-2 border-t-2">
+          <p className="text-lg max-w-2xl">Past Events</p>
+        </section>
 
-          {/* Discussion Notes */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-2">Discussion Notes</h2>
-            <p className="text-gray-600">
-              Notes from the event discussions will be displayed here.
-            </p>
-          </section>
-
-          {/* Photos */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-2">Event Photos</h2>
-            <p className="text-gray-600">
-              Photos from the event will be displayed here.
-            </p>
-          </section>
-        </main>
+        <section className="p-6 space-y-10">
+          {events.map((event) => (
+            <div
+              key={event.id}
+              className="flex flex-col md:flex-row items-start md:items-center gap-6 p-4 rounded-lg"
+            >
+              <div className="w-full md:w-1/6 text-center">
+                <p className="text-lg font-bold">2025</p>
+                <p className="text-2xl uppercase text-gray-600">Feb</p>
+              </div>
+              <div className="w-full md:w-1/3">
+                <img
+                  src="https://www.science.org/do/10.1126/science.aal1042/full/iStock-495689014_16x9-1644908617563.jpg"
+                  alt="Event"
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+              </div>
+              <div className="w-full md:w-1/2 space-y-2">
+                <h2 className="text-xl font-semibold">{event.name}</h2>
+                <p className="text-sm text-gray-700">
+                  The Workshop Launch marked the first gathering...
+                </p>
+                <Link
+                  href={`/events/${event.slug}`}
+                  className="mt-2 text-blue-600 hover:underline font-medium inline-block"
+                >
+                  View Event Details →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </section>
       </div>
     </main>
   );

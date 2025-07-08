@@ -1,49 +1,84 @@
 "use client";
 
+import Image from "next/image";
+
+const team = [
+  {
+    name: "Seij De Leon",
+    title: "Software Developer / UI Expert",
+    lab: "LBNL",
+    image: "/Seij.png",
+  },
+  {
+    name: "Rachael Hill",
+    title: "Human Factors Scientist",
+    lab: "Idaho National Laboratory",
+    image: "/Rachael.png",
+  },
+  {
+    name: "Zachary Spielman",
+    title: "Human Factors Scientist",
+    lab: "Idaho National Laboratory",
+    image: "/Zach.png",
+  },
+  {
+    name: "Madelyn Polzin",
+    title: "User Experience Expert",
+    lab: "Fermi National Accelerator Laboratory",
+    image: "/Maddie.png",
+  },
+  {
+    name: "Casey Kovesdi",
+    title: "Human Factors Scientist",
+    lab: "Idaho National Laboratory",
+    image: "/Casey.png",
+  },
+  {
+    name: "Tasha Summer",
+    title: "Department Head",
+    lab: "SLAC",
+    image: "/Tasha.png",
+  },
+  {
+    name: "Tiffany Tran",
+    title: "UI/UX Expert",
+    lab: "SLAC",
+    image: "/Tiffany.png",
+  },
+];
+
 export default function About() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="h-[40vh] bg-[#1e88b6] flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          About
+        <h1
+          className="text
+        -5xl md:text-6xl font-bold text-white mb-4"
+        >
+          About Us
         </h1>
-        <p className="text-lg md:text-xl text-white max-w-2xl">
-          Join us to explore the importance of UI/UX in control systems and
-          software applications at national laboratories.
-        </p>
+        <p className="text-lg md:text-xl text-white max-w-2xl">Meet the Team</p>
       </section>
 
-      {/* Feature Cards Section */}
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[
-            {
-              emoji: "🌐",
-              title: "Networking",
-              description:
-                "Connect with professionals from various national laboratories and share insights on UI/UX practices.",
-            },
-            {
-              emoji: "🛠️",
-              title: "Hands-On Sessions",
-              description:
-                "Participate in interactive workshops that focus on practical applications of UI/UX in control systems.",
-            },
-            {
-              emoji: "💡",
-              title: "Innovative Solutions",
-              description:
-                "Explore cutting-edge solutions and discuss how UI/UX can enhance software applications.",
-            },
-          ].map((feature, index) => (
+      {/* Team Profiles */}
+      <section className="py-20 px-6 bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {team.map((member, index) => (
             <div
               key={index}
-              className="p-6 text-center shadow-xl rounded-2xl bg-gray-50 hover:shadow-2xl transition-shadow"
+              className="flex flex-col items-center text-center bg-gray-50 rounded-xl p-6 shadow hover:shadow-md transition"
             >
-              <div className="text-5xl mb-4">{feature.emoji}</div>
-              <h2 className="text-2xl font-semibold mb-2">{feature.title}</h2>
-              <p className="text-gray-600 text-base">{feature.description}</p>
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={160}
+                height={160}
+                className="rounded-full object-cover mb-4"
+              />
+              <h3 className="text-xl font-semibold">{member.name}</h3>
+              <p className="text-sm text-gray-600">{member.title}</p>
+              <p className="text-sm text-blue-700 font-medium">{member.lab}</p>
             </div>
           ))}
         </div>

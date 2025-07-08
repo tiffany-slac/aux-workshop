@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MousePointer, Settings, Code } from "react-feather";
 
 export default function HomePage() {
@@ -27,11 +28,13 @@ export default function HomePage() {
             <p className="text-lg text-[#333] mb-5">
               Welcome to a Community of Guidance and Support
             </p>
-            <a href="/resources">
-              <button className="bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
-                Learn More
-              </button>
-            </a>
+            <Link href="/resources" passHref>
+              <div>
+                <button className="bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
+                  Learn More
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
 

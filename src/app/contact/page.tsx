@@ -4,7 +4,6 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Image from "next/image";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
