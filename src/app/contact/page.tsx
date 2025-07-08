@@ -83,42 +83,21 @@ export default function Contact() {
           Organizers
         </h1>
         <p className="text-lg md:text-xl text-white max-w-2xl">
-          This workshop is a collaborative effort between INL, FNAL, and SLAC,
-          aimed at fostering knowledge sharing and improving operational
+          This workshop is a collaborative effort between INL, FNAL, LBNL, and
+          SLAC, aimed at fostering knowledge sharing and improving operational
           efficiency.
         </p>
       </section>
 
       {/* Info + Logos */}
-      <section className="py-12 px-6 flex flex-col items-center text-center">
+      <section className="py-12 px-6 flex flex-col items-center">
         <p className="text-lg text-gray-700 max-w-3xl mb-6">
           Launched in 2025, this initiative focuses on the importance of UI/UX
           at accelerator facilities. We are currently in early planning stages
-          and will share more following our first preliminary meeting.
+          and will share more following our first preliminary meeting. In the
+          meantime, if you would like to be added to our mailing list or have
+          interest in attending our next event, please fill out the form below.
         </p>
-        <div className="flex justify-center items-center space-x-6 mb-10">
-          <Image
-            src={`/fnal.jpg`}
-            alt={`fnal logo`}
-            width={160}
-            height={100}
-            className="object-cover rounded-lg shadow-lg"
-          />
-          <Image
-            src={`/inl.png`}
-            alt={`inl logo`}
-            width={160}
-            height={100}
-            className="object-cover rounded-lg shadow-lg"
-          />
-          <Image
-            src={`/slac.svg`}
-            alt={`slac logo`}
-            width={160}
-            height={100}
-            className="object-cover rounded-lg shadow-lg"
-          />
-        </div>
       </section>
 
       {/* Contact Form */}

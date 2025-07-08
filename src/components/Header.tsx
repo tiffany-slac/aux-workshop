@@ -43,14 +43,14 @@ export default function Header() {
           <Link href="/" className={`mx-3 ${navTextColor}`}>
             Home
           </Link>
-          <Link href="/about" className={`mx-3 ${navTextColor}`}>
-            About
+          <Link href="/events" className={`mx-3 ${navTextColor}`}>
+            Events
           </Link>
           <Link href="/resources" className={`mx-3 ${navTextColor}`}>
             Resources
           </Link>
-          <Link href="/events" className={`mx-3 ${navTextColor}`}>
-            Events
+          <Link href="/about" className={`mx-3 ${navTextColor}`}>
+            About Us
           </Link>
           <Link href="/contact" className={`mx-3 ${navTextColor}`}>
             Contact

@@ -8,10 +8,10 @@ export default function HomePage() {
       <section className="flex h-screen relative">
         <div className="absolute top-1/2 left-1/2 transform -translate-x-[10%] -translate-y-1/2 w-[50vw] h-[70vh] bg-[#D4B060] flex justify-center items-center">
           <Image
-            src="/uiux.jpeg"
+            src="/landingpage.png"
             alt="UI/UX Design"
-            width={800}
-            height={600}
+            width={1000}
+            height={800}
             className="object-contain max-w-[90%] max-h-[90%]"
           />
         </div>
@@ -27,7 +27,7 @@ export default function HomePage() {
             <p className="text-lg text-[#333] mb-5">
               Welcome to a Community of Guidance and Support
             </p>
-            <a href="/event">
+            <a href="/resources">
               <button className="bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
                 Learn More
               </button>
@@ -80,10 +80,10 @@ export default function HomePage() {
               The Importance of UI/UX Design in Control Systems
             </h1>
             <p className="text-lg text-[#333]">
-              Taking the time to focus on UI/UX isn&apos;t an extra step—it&apos;s the
-              foundation of success. The best technology is only as powerful as
-              its usability. By prioritizing human factors, we create systems
-              that work *for people*.
+              Taking the time to focus on UI/UX isn&apos;t an extra
+              step—it&apos;s the foundation of success. The best technology is
+              only as powerful as its usability. By prioritizing human factors,
+              we create systems that work *for people*.
             </p>
           </div>
         </div>
@@ -134,6 +134,45 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="py-20 px-6 md:px-12 bg-white">
+        <div className="text-left mb-6">
+          <p className="text-lg font-bold text-[#1e88b6] mb-2">ABOUT</p>
+          <h1 className="text-5xl font-bold text-black mb-4">
+            What We Are Doing
+          </h1>
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+          {[
+            {
+              emoji: "🌐",
+              title: "Networking",
+              description:
+                "Connect with professionals from various national laboratories and share insights on UI/UX practices.",
+            },
+            {
+              emoji: "🛠️",
+              title: "Hands-On Sessions",
+              description:
+                "Participate in interactive workshops that focus on practical applications of UI/UX in control systems.",
+            },
+            {
+              emoji: "💡",
+              title: "Innovative Solutions",
+              description:
+                "Explore cutting-edge solutions and discuss how UI/UX can enhance software applications.",
+            },
+          ].map((feature, index) => (
+            <div
+              key={index}
+              className="p-6 text-center shadow-xl rounded-2xl bg-gray-50 hover:shadow-2xl transition-shadow"
+            >
+              <div className="text-5xl mb-4">{feature.emoji}</div>
+              <h2 className="text-2xl font-semibold mb-2">{feature.title}</h2>
+              <p className="text-gray-600 text-base">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
