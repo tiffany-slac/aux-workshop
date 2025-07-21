@@ -3,8 +3,8 @@ export default function Event2() {
     <main className="bg-white min-h-screen text-gray-800">
       {/* Hero Section */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col justify-center px-8 md:px-16 text-white">
-        <h1 className="text-4xl font-bold mb-1">Workshop 2</h1>
-        <p className="text-lg opacity-90">2026</p>
+        <h1 className="text-4xl font-bold mb-1">2026, hosted by TBA</h1>
+        <p className="text-lg opacity-90">Workshop 2</p>
       </section>
 
       {/* Event Info Section */}
@@ -42,20 +42,20 @@ export default function Event2() {
             {
               date: "Day 1",
               summary:
-                "Kick off with introductions, overview of the workshop’s goals, and participants’ mini presentations (background, lessons, and challenges).",
+                "Kick off",
             },
             {
               date: "Day 2",
               summary:
-                "Brainstorming groups or open sessions, white paper input, and component sketches.",
+                "Brainstorming",
             },
             {
               date: "Day 3",
               summary:
-                "Wrap-up with next steps, goal-setting, and optional tours or excursions.",
+                "Wrap-up",
             },
           ].map((item, index) => (
-            <div key={index} className="flex items-start gap-5">
+            <div key={index} className="flex items-center gap-5">
               <div className="w-16 h-16 bg-[#1e88b6] text-white rounded-full flex items-center justify-center text-md font-bold shadow-md">
                 {item.date}
               </div>
@@ -80,13 +80,7 @@ export default function Event2() {
         <h2 className="text-2xl font-bold mb-4">Related Resources</h2>
         <ul className="list-disc pl-6 space-y-2 text-blue-700">
           <li>
-            <a href="#" className="hover:underline">Download Slides</a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">Watch Event Recording</a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">Speaker Bios</a>
+            <a href="#" className="hover:underline">View Poster</a>
           </li>
         </ul>
       </section>

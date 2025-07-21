@@ -5,13 +5,12 @@ import Link from "next/link";
 const events = [
   {
     id: 1,
-    name: "2025 Accelerate UX",
+    name: "2025, hosted by SLAC",
     slug: "2025",
   },
 ];
 
 export default function EventsPage() {
-
   return (
     <main className="bg-white min-h-screen">
       {/* Hero Section */}
@@ -44,19 +43,18 @@ export default function EventsPage() {
               />
             </div>
             <div className="w-full md:w-1/2 space-y-2">
-              <h2 className="text-xl font-semibold">Workshop</h2>
+              <h2 className="text-xl font-semibold">2026, hosted by TBA</h2>
               <h3 className="text-md text-gray-500">TBA</h3>
               <p className="text-sm text-gray-600">Address</p>
               <p className="text-sm text-gray-700">
-                This is a brief summary of the event. It highlights what the
-                event was about and its key moments.
+                Information on our next event coming soon...
               </p>
               <Link
-                  href={`/events/2026`}
-                  className="mt-2 text-blue-600 hover:underline font-medium inline-block"
-                >
-                  View Event Details →
-                </Link>
+                href={`/events/2026`}
+                className="mt-2 text-blue-600 hover:underline font-medium inline-block"
+              >
+                View Event Details →
+              </Link>
             </div>
           </div>
         </section>
@@ -83,6 +81,8 @@ export default function EventsPage() {
               </div>
               <div className="w-full md:w-1/2 space-y-2">
                 <h2 className="text-xl font-semibold">{event.name}</h2>
+                <h3 className="text-md text-gray-500">February 26-28</h3>
+                <p className="text-sm text-gray-600">2575 Sand Hill Rd, Menlo Park, CA 94025</p>
                 <p className="text-sm text-gray-700">
                   The Workshop Launch marked the first gathering...
                 </p>

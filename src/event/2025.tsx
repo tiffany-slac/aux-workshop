@@ -1,10 +1,27 @@
+"use client";
+
+import { ChevronLeft, ChevronRight } from "react-feather";
+import { useRef } from "react";
+
 export default function Event1() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 300; // adjust scroll amount if needed
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <main className="bg-white min-h-screen text-gray-800">
       {/* Hero Section */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col justify-center px-8 md:px-16 text-white">
-        <h1 className="text-4xl font-bold mb-1">Workshop Launch</h1>
-        <p className="text-lg opacity-90">SLAC 2025</p>
+        <h1 className="text-4xl font-bold mb-1">2025, hosted by SLAC</h1>
+        <p className="text-lg opacity-90">Workshop Launch</p>
       </section>
 
       {/* Event Info Section */}
@@ -29,9 +46,9 @@ export default function Event1() {
           </p>
           <p className="text-base leading-relaxed">
             Over three days, we laid the groundwork for a new kind of
-            collaboration—one focused on practical, actionable design.
-            We discussed everything from modernization strategies and
-            user involvement to version control and interface consistency.
+            collaboration—one focused on practical, actionable design. We
+            discussed everything from modernization strategies and user
+            involvement to version control and interface consistency.
           </p>
           <p className="text-base leading-relaxed">
             In the short term, the workshop helped us shape the structure of
@@ -82,7 +99,7 @@ export default function Event1() {
                 "Wrap-up with next steps, goal-setting, and optional tours or excursions.",
             },
           ].map((item, index) => (
-            <div key={index} className="flex items-start gap-5">
+            <div key={index} className="flex items-center gap-5">
               <div className="w-16 h-16 bg-[#1e88b6] text-white rounded-full flex items-center justify-center text-md font-bold shadow-md">
                 {item.date}
               </div>
@@ -95,22 +112,51 @@ export default function Event1() {
       {/* Photo Gallery */}
       <section className="px-8 md:px-16 py-10">
         <h2 className="text-2xl font-bold mb-4">Photo Gallery</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          <img
-            src="https://via.placeholder.com/300x200"
-            className="rounded-lg shadow-sm"
-            alt="Gallery image"
-          />
-          <img
-            src="https://via.placeholder.com/300x200"
-            className="rounded-lg shadow-sm"
-            alt="Gallery image"
-          />
-          <img
-            src="https://via.placeholder.com/300x200"
-            className="rounded-lg shadow-sm"
-            alt="Gallery image"
-          />
+
+        <div className="flex items-center gap-4">
+          {/* Left Arrow */}
+          <button
+            onClick={() => scroll("left")}
+            className="bg-white p-2 rounded-full shadow hover:bg-gray-100"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft size={24} color="#1e88b6" />
+          </button>
+
+          {/* Scrollable row */}
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar"
+            style={{ scrollBehavior: "smooth", flexGrow: 1 }}
+          >
+            {[
+              "/photo1.jpeg",
+              "/photo2.png",
+              "/photo3.jpeg",
+              "/photo4.png",
+              "/photo5.png",
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="aspect-square w-72 flex-shrink-0 rounded-lg overflow-hidden shadow-sm"
+              >
+                <img
+                  src={src}
+                  alt={`Gallery image ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => scroll("right")}
+            className="bg-white p-2 rounded-full shadow hover:bg-gray-100"
+            aria-label="Scroll right"
+          >
+            <ChevronRight size={24} color="#1e88b6" />
+          </button>
         </div>
       </section>
 
@@ -119,12 +165,22 @@ export default function Event1() {
         <h2 className="text-2xl font-bold mb-4">Related Resources</h2>
         <ul className="list-disc pl-6 space-y-2 text-blue-700">
           <li>
-            <a href="#" className="hover:underline">
+            <a
+              href="https://www.canva.com/design/DAGcGJt9-kM/Zt-3_-I4XZ5v6zMpXV-hPw/view?utm_content=DAGcGJt9-kM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h52ae792823"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
               View Poster
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline">
+            <a
+              href="https://als.lbl.gov/als-computing-group-shapes-the-future-of-accelerator-ui-ux/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
               Download Article
             </a>
           </li>
