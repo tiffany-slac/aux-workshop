@@ -11,9 +11,8 @@ export default function HomePage() {
           <Image
             src="/landingpage.png"
             alt="UI/UX Design"
-            width={1000}
-            height={800}
-            className="object-contain max-w-[90%] max-h-[90%]"
+            fill
+            className="object-contain max-w-[100%] max-h-[100%]"
           />
         </div>
 
@@ -46,7 +45,7 @@ export default function HomePage() {
         <h2 className="text-4xl font-bold text-center mb-10">
           Participating Laboratories
         </h2>
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-5">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-14 px-5">
           {["berkeley.jpg", "fnal.jpg", "inl.png", "slac.svg"].map(
             (logo, index) => (
               <div key={index} className="flex items-center justify-center">
@@ -63,119 +62,122 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Third Section - About */}
-      <section className="flex py-20 h-[75vh] bg-white">
-        <div className="w-1/4 mx-12 flex justify-center items-center">
-          <Image
-            src="/graphic.jpeg"
-            alt="Workshop Graphic"
-            width={300}
-            height={300}
-          />
-        </div>
-
-        <div className="w-2/3 mx-6 flex flex-col justify-center p-5">
-          <div className="max-w-2xl text-left mb-6">
-            <p className="text-lg font-bold text-[#1e88b6] mb-2">
-              ABOUT THE WORKSHOP
+      {/* About Section */}
+      <section className="bg-white py-24 px-6 md:px-16">
+        <div className="grid md:grid-cols-3 gap-12 items-center">
+          <div className="col-span-1 flex justify-center">
+            <Image
+              src="/graphic.jpeg"
+              alt="Workshop Graphic"
+              width={300}
+              height={300}
+            />
+          </div>
+          <div className="md:col-span-2">
+            <p className="text-lg font-semibold text-[#1e88b6] mb-2 uppercase tracking-wide">
+              About the Workshop
             </p>
-            <h1 className="text-5xl font-bold text-black mb-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               The Importance of UI/UX Design in Control Systems
-            </h1>
-            <p className="text-lg text-[#333]">
-              Taking the time to focus on UI/UX isn&apos;t an extra
-              step—it&apos;s the foundation of success. The best technology is
-              only as powerful as its usability. By prioritizing human factors,
-              we create systems that work *for people*.
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Taking the time to focus on UI/UX isn’t an extra step—it’s the
+              foundation of success. The best technology is only as powerful as
+              its usability. By prioritizing human factors, we create systems
+              that work <em>for people</em>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Fourth Section - Audience */}
-      <section className="flex py-20 h-[75vh] bg-gray-100">
-        <div className="mx-6 flex flex-col justify-center p-5">
-          <div className="text-left mb-6">
-            <p className="text-lg font-bold text-[#1e88b6] mb-2">AUDIENCE</p>
-            <h1 className="text-5xl font-bold text-black mb-4">
-              Who&apos;s Involved?
-            </h1>
-            <p className="text-lg text-[#333] mb-8">
-              A gathering of professionals to consolidate best practices for
-              control systems.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Cards */}
+      {/* Audience Section */}
+      <section className="bg-gray-50 py-24 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-lg font-semibold text-[#1e88b6] mb-2 uppercase tracking-wide">
+            Audience
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Who’s Involved?
+          </h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-3xl">
+            A gathering of professionals to consolidate best practices for
+            control systems.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
-                icon: <MousePointer size={64} className="text-[#1e88b6]" />,
+                icon: <MousePointer size={48} className="text-[#1e88b6]" />,
                 title: "UI/UX Experts",
                 desc: "Designers focused on user experience for control systems.",
               },
               {
-                icon: <Settings size={64} className="text-[#1e88b6]" />,
+                icon: <Settings size={48} className="text-[#1e88b6]" />,
                 title: "Control System Specialists",
                 desc: "Experts working with research control systems.",
               },
               {
-                icon: <Code size={64} className="text-[#1e88b6]" />,
+                icon: <Code size={48} className="text-[#1e88b6]" />,
                 title: "Software Engineers",
                 desc: "Engineers developing applications for operational excellence.",
               },
             ].map(({ icon, title, desc }, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center text-center p-4 bg-white shadow-md rounded-lg"
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow text-center"
               >
-                {icon}
-                <h2 className="text-xl font-semibold text-[#1e88b6] mt-4">
+                <div className="flex justify-center mb-4">{icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {title}
-                </h2>
-                <p className="text-md text-gray-600">{desc}</p>
+                </h3>
+                <p className="text-gray-600">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="text-left mb-6">
-          <p className="text-lg font-bold text-[#1e88b6] mb-2">ABOUT</p>
-          <h1 className="text-5xl font-bold text-black mb-4">
+
+      {/* What We Are Doing Section */}
+      <section className="bg-white py-24 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-lg font-semibold text-[#1e88b6] mb-2 uppercase tracking-wide">
+            About
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
             What We Are Doing
-          </h1>
-        </div>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[
-            {
-              emoji: "🌐",
-              title: "Networking",
-              description:
-                "Connect with professionals from various national laboratories and share insights on UI/UX practices.",
-            },
-            {
-              emoji: "🛠️",
-              title: "Hands-On Sessions",
-              description:
-                "Participate in interactive workshops that focus on practical applications of UI/UX in control systems.",
-            },
-            {
-              emoji: "💡",
-              title: "Innovative Solutions",
-              description:
-                "Explore cutting-edge solutions and discuss how UI/UX can enhance software applications.",
-            },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="p-6 text-center shadow-xl rounded-2xl bg-gray-50 hover:shadow-2xl transition-shadow"
-            >
-              <div className="text-5xl mb-4">{feature.emoji}</div>
-              <h2 className="text-2xl font-semibold mb-2">{feature.title}</h2>
-              <p className="text-gray-600 text-base">{feature.description}</p>
-            </div>
-          ))}
+          </h2>
+          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              {
+                emoji: "🌐",
+                title: "Networking",
+                description:
+                  "Connect with professionals from various national laboratories and share insights on UI/UX practices.",
+              },
+              {
+                emoji: "🛠️",
+                title: "Hands-On Sessions",
+                description:
+                  "Participate in interactive workshops that focus on practical applications of UI/UX in control systems.",
+              },
+              {
+                emoji: "💡",
+                title: "Innovative Solutions",
+                description:
+                  "Explore cutting-edge solutions and discuss how UI/UX can enhance software applications.",
+              },
+            ].map(({ emoji, title, description }, i) => (
+              <div
+                key={i}
+                className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center"
+              >
+                <div className="text-5xl mb-4">{emoji}</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                  {title}
+                </h3>
+                <p className="text-gray-600">{description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

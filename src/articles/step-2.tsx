@@ -202,6 +202,21 @@ export default function Step2Wireframe() {
           cycle that adequately captured user involvement from concept, to
           evaluation, to deployment.
         </p>
+      </section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-3">References</h2>
+        <p className="italic text-gray-600">
+          Norman, D.A. (2013). The Design of Everyday Things.
+        </p>
+        <p className="italic text-gray-600">
+          Nielsen, J. (1994). 10 Usability Heuristics for User Interface Design.
+        </p>
+        <p className="italic text-gray-600">
+          Endsley, M.R. (1995). Toward a Theory of Situation Awareness in Dynamic Systems.
+        </p>
+        <p className="italic text-gray-600">
+          Woods, D.D., & Hollnagel, E. (2006). Joint Cognitive Systems: Patterns in Cognitive Systems Engineering.
+        </p>
         <div className="flex justify-between items-center mt-12">
           <Link href="/resources/step-1">
             <p className="font-semibold text-blue-700 cursor-pointer hover:underline">

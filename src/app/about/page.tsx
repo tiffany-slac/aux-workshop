@@ -5,7 +5,7 @@ import Image from "next/image";
 const team = [
   {
     name: "Seij De Leon",
-    title: "Software Developer / UI Expert",
+    title: "Software Developer",
     lab: "LBNL",
     image: "/Seij.png",
   },
@@ -23,7 +23,7 @@ const team = [
   },
   {
     name: "Madelyn Polzin",
-    title: "User Experience Expert",
+    title: "User Experience Engineer",
     lab: "Fermi National Accelerator Laboratory",
     image: "/Maddie.png",
   },
@@ -41,7 +41,7 @@ const team = [
   },
   {
     name: "Tiffany Tran",
-    title: "UI/UX Expert",
+    title: "Software Developer",
     lab: "SLAC",
     image: "/Tiffany.png",
   },
@@ -59,6 +59,7 @@ export default function About() {
           About Us
         </h1>
         <p className="text-lg md:text-xl text-white max-w-2xl">Meet the Team</p>
+        <p className="text-lg md:text-xl text-white max-w-2xl">The User Experience for Accelerator Control Systems Working Group (UXACS-WG)</p>
       </section>
 
       {/* Team Profiles */}
