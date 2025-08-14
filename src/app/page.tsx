@@ -27,7 +27,7 @@ export default function HomePage() {
             <p className="text-lg text-[#333] mb-5">
               Welcome to a Community of Guidance and Support
             </p>
-            <Link href="/resources" passHref>
+            <Link href="/resources/get-started" passHref>
               <div>
                 <button className="bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
                   Learn More
@@ -46,7 +46,7 @@ export default function HomePage() {
           Participating Laboratories
         </h2>
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-14 px-5">
-          {["berkeley.jpg", "fnal.jpg", "inl.png", "slac.svg"].map(
+          {["berkeley.png", "fnal.png", "inl.png", "slac.png"].map(
             (logo, index) => (
               <div key={index} className="flex items-center justify-center">
                 <Image
@@ -54,7 +54,7 @@ export default function HomePage() {
                   alt={`${logo} logo`}
                   width={160}
                   height={100}
-                  className="object-cover rounded-lg shadow-lg"
+                  className="object-cover"
                 />
               </div>
             )
@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-12 items-center">
           <div className="col-span-1 flex justify-center">
             <Image
-              src="/graphic.jpeg"
+              src="/graphic.png"
               alt="Workshop Graphic"
               width={300}
               height={300}

@@ -16,10 +16,16 @@ const team = [
     image: "/Rachael.png",
   },
   {
-    name: "Zachary Spielman",
+    name: "Casey Kovesdi",
     title: "Human Factors Scientist",
     lab: "Idaho National Laboratory",
-    image: "/Zach.png",
+    image: "/Casey.png",
+  },
+  {
+    name: "Katya Le Blanc",
+    title: "Senior Human Factors Scientist",
+    lab: "Idaho National Laboratory",
+    image: "/Katya.png",
   },
   {
     name: "Madelyn Polzin",
@@ -28,10 +34,10 @@ const team = [
     image: "/Maddie.png",
   },
   {
-    name: "Casey Kovesdi",
+    name: "Zachary Spielman",
     title: "Human Factors Scientist",
     lab: "Idaho National Laboratory",
-    image: "/Casey.png",
+    image: "/Zach.png",
   },
   {
     name: "Tasha Summer",
@@ -59,7 +65,10 @@ export default function About() {
           About Us
         </h1>
         <p className="text-lg md:text-xl text-white max-w-2xl">Meet the Team</p>
-        <p className="text-lg md:text-xl text-white max-w-2xl">The User Experience for Accelerator Control Systems Working Group (UXACS-WG)</p>
+        <p className="text-lg md:text-xl text-white max-w-2xl">
+          The User Experience for Accelerator Control Systems Working Group
+          (UXACS-WG)
+        </p>
       </section>
 
       {/* Team Profiles */}

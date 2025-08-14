@@ -33,9 +33,11 @@ export default function Header() {
               className="cursor-pointer"
             />
           </Link>
-          <p className={`text-2xl mx-3 ${workshopTextColor}`}>
-            Accelerate UX Workshop
-          </p>
+          <Link href="/">
+            <p className={`text-2xl mx-3 cursor-pointer ${workshopTextColor}`}>
+              Accelerate UX Workshop
+            </p>
+          </Link>
         </div>
 
         {/* Nav Links */}
