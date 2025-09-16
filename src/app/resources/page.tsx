@@ -64,12 +64,18 @@ export default function ResourcesPage() {
           <div
             key={article.slug}
             onClick={() => router.push(`/resources/${article.slug}`)}
-            className={`border rounded-lg shadow-lg cursor-pointer ${
-              gradients[index % gradients.length]
-            } text-white`}
+            className={`border rounded-lg shadow-lg cursor-pointer flex flex-col overflow-hidden`}
           >
-            <div className="h-40 flex items-center justify-center text-xl font-bold" />
-            <div className="p-4 bg-white text-gray-700 rounded-b-lg">
+            {/* Top gradient header */}
+            <div
+              className={`h-40 flex items-center justify-center text-xl font-bold text-white ${
+                gradients[index % gradients.length]
+              }`}
+            >
+            </div>
+
+            {/* Bottom content */}
+            <div className="flex-1 p-4 bg-white text-gray-700">
               <h2 className="text-xl font-bold mb-2">{article.title}</h2>
               <p>{article.description}</p>
             </div>

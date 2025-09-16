@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
@@ -160,11 +160,12 @@ const Article1: React.FC = () => {
         date="April 30, 2025"
         readTime={5}
       />
-      <div className="w-full h-64 rounded-lg bg-white flex items-center justify-center p-4">
-        <img
+      <div className="w-full h-64 rounded-lg bg-white flex items-center justify-center relative">
+        <Image
           src="/roadmap.svg"
           alt="Roadmap"
-          className="max-w-full max-h-full object-contain"
+          fill 
+          className="object-contain"
         />
       </div>
       <p className="text-lg">

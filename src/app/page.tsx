@@ -6,40 +6,52 @@ export default function HomePage() {
   return (
     <div>
       {/* First Section */}
-      <section className="flex h-screen relative">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-[10%] -translate-y-1/2 w-[50vw] h-[70vh] bg-[#D4B060] flex justify-center items-center">
-          <Image
-            src="/landingpage.png"
-            alt="UI/UX Design"
-            fill
-            className="object-contain max-w-[100%] max-h-[100%]"
-          />
+      <section className="relative flex flex-col md:flex-row items-center justify-center overflow-hidden h-[calc(100vh-5rem)]">
+        <div className="hidden md:flex absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-[10%] w-[50vw] h-[70vh] justify-center items-center z-10 rounded-lg overflow-hidden">
+          <div className="relative w-full h-full">
+            <Image
+              src="/landingpage.png"
+              alt="UI/UX Design"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
 
-        <div className="w-1/2 flex items-center p-5 -translate-y-[10%] z-10">
-          <div className="max-w-md text-left ml-6">
+        {/* Text content (fills left half on md+, full width on mobile) */}
+        <div className="w-full md:w-1/2 flex items-center p-6 md:pl-16 z-20">
+          <div className="max-w-md mx-auto md:mx-0">
             <p className="text-lg font-bold text-[#1e88b6] mb-2">
               Elevating User Experience
             </p>
-            <h1 className="text-5xl font-bold text-black mb-2">
+            <h1 className="text-3xl md:text-5xl font-bold text-black mb-2">
               Current UI/UX Standards at Accelerator Laboratories
             </h1>
-            <p className="text-lg text-[#333] mb-5">
+            <p className="text-base md:text-lg text-[#333] mb-5">
               Welcome to a Community of Guidance and Support
             </p>
             <Link href="/resources/get-started" passHref>
-              <div>
-                <button className="bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
-                  Learn More
-                </button>
-              </div>
+              <button className="bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
+                Learn More
+              </button>
             </Link>
           </div>
         </div>
 
-        <div className="w-1/2 bg-[#1e88b6]"></div>
-      </section>
+        {/* Blue background panel: only on desktop (right half) */}
+        <div className="hidden md:block md:w-1/2 bg-[#1e88b6] h-full z-0" />
 
+        {/* Mobile image: visible below text on small screens only */}
+        <div className="md:hidden w-full h-64 flex items-center justify-center mt-12">
+          <Image
+            src="/landingpage.png"
+            alt="UI/UX Design"
+            width={700}
+            height={420}
+            className="object-contain"
+          />
+        </div>
+      </section>
       {/* Second Section - Labs */}
       <section className="py-20 h-[75vh] bg-gray-100 flex flex-col items-center justify-center">
         <h2 className="text-4xl font-bold text-center mb-10">
@@ -61,7 +73,6 @@ export default function HomePage() {
           )}
         </div>
       </section>
-
       {/* About Section */}
       <section className="bg-white py-24 px-6 md:px-16">
         <div className="grid md:grid-cols-3 gap-12 items-center">
@@ -89,7 +100,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Audience Section */}
       <section className="bg-gray-50 py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
@@ -135,7 +145,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* What We Are Doing Section */}
       <section className="bg-white py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
