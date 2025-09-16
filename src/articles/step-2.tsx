@@ -6,6 +6,12 @@ export default function Step2Wireframe() {
       <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
         <ol className="list-none p-0 inline-flex space-x-1">
           <li>
+            <Link href="/resources">
+              <p className="text-blue-700 hover:underline">Resources</p>
+            </Link>
+          </li>
+          <li>/</li>
+          <li>
             <Link href="/resources/get-started">
               <p className="text-blue-700 hover:underline">Getting Started</p>
             </Link>
@@ -207,16 +213,16 @@ export default function Step2Wireframe() {
         <h2 className="text-2xl font-semibold mb-3">References</h2>
         <p className="italic text-gray-600">
           Norman, D.A. (2013). The Design of Everyday Things.
-        </p>
+        </p><br></br>
         <p className="italic text-gray-600">
           Nielsen, J. (1994). 10 Usability Heuristics for User Interface Design.
-        </p>
+        </p><br></br>
         <p className="italic text-gray-600">
           Endsley, M.R. (1995). Toward a Theory of Situation Awareness in Dynamic Systems.
-        </p>
+        </p><br></br>
         <p className="italic text-gray-600">
           Woods, D.D., & Hollnagel, E. (2006). Joint Cognitive Systems: Patterns in Cognitive Systems Engineering.
-        </p>
+        </p><br></br>
         <div className="flex justify-between items-center mt-12">
           <Link href="/resources/step-1">
             <p className="font-semibold text-blue-700 cursor-pointer hover:underline">

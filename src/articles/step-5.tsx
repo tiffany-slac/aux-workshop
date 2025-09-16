@@ -7,14 +7,18 @@ export default function Step5Wireframe() {
       <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
         <ol className="list-none p-0 inline-flex space-x-1">
           <li>
+            <Link href="/resources">
+              <p className="text-blue-700 hover:underline">Resources</p>
+            </Link>
+          </li>
+          <li>/</li>
+          <li>
             <Link href="/resources/get-started">
               <p className="text-blue-700 hover:underline">Getting Started</p>
             </Link>
           </li>
           <li>/</li>
-          <li className="text-gray-500">
-            Step 5: Record Design Decisions
-          </li>
+          <li className="text-gray-500">Step 5: Record Design Decisions</li>
         </ol>
       </nav>
 
@@ -141,6 +145,13 @@ export default function Step5Wireframe() {
           explains the decision and why it was made—saving you from rehashing
           the past.
         </p>
+        <Image
+          src="/step50.png"
+          alt="Diagram showing step 5 example"
+          width={300}
+          height={300}
+          className="rounded-lg shadow-md mx-auto my-8"
+        />
 
         <p className="leading-relaxed">
           Example: Hitting pause (intentionally)
@@ -157,10 +168,10 @@ export default function Step5Wireframe() {
         </p>
 
         <Image
-          src="/step5.png"
+          src="/step51.png"
           alt="Diagram showing step 5 example"
-          width={800}
-          height={500}
+          width={300}
+          height={300}
           className="rounded-lg shadow-md mx-auto my-8"
         />
       </section>

@@ -6,6 +6,12 @@ export default function Step1Wireframe() {
       <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
         <ol className="list-none p-0 inline-flex space-x-1">
           <li>
+            <Link href="/resources">
+              <p className="text-blue-700 hover:underline">Resources</p>
+            </Link>
+          </li>
+          <li>/</li>
+          <li>
             <Link href="/resources/get-started">
               <p className="text-blue-700 hover:underline">Getting Started</p>
             </Link>
@@ -76,7 +82,7 @@ export default function Step1Wireframe() {
           Making the system objectives available to all team members aligns the
           expectations of all stakeholders involved. This includes users,
           designers, developers, and business leaders. When everyone understands
-          the project&apos;s goals, it fosters collaboration and reduces the risk of
+          the project's goals, it fosters collaboration and reduces the risk of
           misunderstandings. Furthermore, communicating what each screen,
           function, or capability is trying to achieve increases the value of
           feedback from end users. Focusing the attention of subject matter
@@ -110,7 +116,7 @@ export default function Step1Wireframe() {
           Clear goals and objectives serve as a benchmark for evaluating design
           decisions. When faced with multiple design options, the team can refer
           back to the established goals to determine which option best aligns
-          with the project&apos;s objectives. Trade-off decisions are unavoidable.
+          with the project's objectives. Trade-off decisions are unavoidable.
           Clear objectives facilitates more informed and effective
           decision-making, ensuring that the final design is both functional and
           user-friendly.

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Step4Wireframe() {
@@ -6,12 +7,20 @@ export default function Step4Wireframe() {
       <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
         <ol className="list-none p-0 inline-flex space-x-1">
           <li>
+            <Link href="/resources">
+              <p className="text-blue-700 hover:underline">Resources</p>
+            </Link>
+          </li>
+          <li>/</li>
+          <li>
             <Link href="/resources/get-started">
               <p className="text-blue-700 hover:underline">Getting Started</p>
             </Link>
           </li>
           <li>/</li>
-          <li className="text-gray-500">Step 4: Invest in HiFi Prototypes and Test</li>
+          <li className="text-gray-500">
+            Step 4: Invest in HiFi Prototypes and Test
+          </li>
         </ol>
       </nav>
 
@@ -70,11 +79,13 @@ export default function Step4Wireframe() {
           guide. You should also ensure the UI layout matches the style guide
           and that the expected configuration of the monitor(s) and workstation
           match the intended system configuration. Using the intended hardware,
-          or something faithfully represented, is a good idea here. You should
-          build in navigation and workflows for key display pages. This should
-          be done using the style guide and ensuring that all display pages can
-          be navigated from and to each other following the navigation hierarchy
-          determined in previous steps.
+          or something faithfully represented, is a good idea here.
+        </p>
+        <p className="leading-relaxed mb-4">
+          You should build in navigation and workflows for key display pages.
+          This should be done using the style guide and ensuring that all
+          display pages can be navigated from and to each other following the
+          navigation hierarchy determined in previous steps.
         </p>
         <p className="leading-relaxed mb-4">
           You should build in interactive behaviors for UI display elements.
@@ -103,6 +114,16 @@ export default function Step4Wireframe() {
           What Goes into Validation?
         </h2>
         <p className="leading-relaxed mb-4">
+          The following steps highlight what goes into validation.
+        </p>
+        <Image
+          src="/step40.jpg"
+          alt="Diagram showing one wireframe"
+          width={800}
+          height={300}
+          className="rounded-lg mx-auto my-8"
+        />
+        <p className="leading-relaxed mb-4">
           The first step is to develop your test plan. This is important because
           it provides a ‘blueprint’ what you will test. This test plan should
           identify critical tasks and workflows of interest. This entails those
@@ -110,24 +131,40 @@ export default function Step4Wireframe() {
           tasks/ workflows that are of highest consequence, notably difficult to
           perform, have the greatest change based on the proposed modification,
           or demonstrate critical functionality and interactions with the new
-          control system. Your test plan should also include performance
-          measures; these may include acceptance criteria too, which determine
-          if your system can allow your users to successfully complete their
-          tasks/ workflows. You can use success rates, completion times, or
-          combination to address this. Other measures that may be useful include
-          those that allow you to diagnose issues with the UI, that weren’t
-          caught in earlier testing. These measures may include ratings of
-          workload, usability, satisfaction, situation awareness, or
-          self-reported feedback. It may also be useful to consider describing
-          the testing environment and your HiFi prototype, particularly in
-          describing any limitations of the prototype as compared to the
-          as-built system; this ensures that any findings you have are not
-          attributed to limitations in your prototype that you did not
-          anticipate. Finally, your test plan should have a procedure that your
-          team can use to ensure that you are consistently executing the test.
-          This may include describing roles and responsibilities, as well as
-          specific duties to be carried out (e.g., setting up the HiFi
-          prototype).
+          control system.
+        </p>
+        <p className="leading-relaxed mb-4">
+          Your test plan should also include performance measures; these may
+          include acceptance criteria too, which determine if your system can
+          allow your users to successfully complete their tasks/ workflows. You
+          can use success rates, completion times, or combination to address
+          this; eye tracking can also be used to validate aspects of the design.
+          Other measures that may be useful include those that allow you to
+          diagnose issues with the UI, that weren’t caught in earlier testing.
+          These measures may include ratings of workload, usability,
+          satisfaction, situation awareness, or self-reported feedback. The
+          following figure presents common UX methods and measures and their
+          utility for validation (based on [1] and [2]). The areas shaded in
+          gray represent those methods/ measures that are particularly useful at
+          validation.
+        </p>
+        <Image
+          src="/step41.png"
+          alt="Diagram showing one wireframe"
+          width={800}
+          height={300}
+          className="rounded-lg mx-auto my-8"
+        />
+        <p className="leading-relaxed mb-4">
+          It may also be useful to consider describing the testing environment
+          and your HiFi prototype, particularly in describing any limitations of
+          the prototype as compared to the as-built system; this ensures that
+          any findings you have are not attributed to limitations in your
+          prototype that you did not anticipate. Finally, your test plan should
+          have a procedure that your team can use to ensure that you are
+          consistently executing the test. This may include describing roles and
+          responsibilities, as well as specific duties to be carried out (e.g.,
+          setting up the HiFi prototype).
         </p>
         <p className="leading-relaxed mb-4">
           Next, your testing should be approved by Institutional Review Board
@@ -159,18 +196,35 @@ export default function Step4Wireframe() {
           is ready to be used in real application. The level of documentation
           really depends on your time, resources, and needs.
         </p>
-        <div className="flex justify-between items-center mt-12">
-          <Link href="/resources/step-3">
-            <p className="font-semibold text-blue-700 cursor-pointer hover:underline">
-              &larr; Previous: Step 3
-            </p>
-          </Link>
-          <Link href="/resources/step-5">
-            <p className="font-semibold text-blue-700 cursor-pointer hover:underline">
-              Next: Step 5 &rarr;
-            </p>
-          </Link>
-        </div>
+        <section>
+          <h2 className="text-2xl font-semibold mb-3">References</h2>
+          <p className="italic text-gray-600">
+            Kovesdi, C.R., Joe, J., & Boring, R. (2018, July). A Guide for
+            Selecting Appropriate Human Factors Methods and Measures in Control
+            Room Modernization Efforts in Nuclear Power Plants. In International
+            Conference on Applied Human Factors and Ergonomics, pp. 441-452.
+          </p>
+          <br></br>
+          <p className="italic text-gray-600">
+            Rohrer, C. (2014). When to use which user experience research
+            methods. Jakob Nielsen’s Alertbox. Retrieved from
+            https://www.nngroup.com/articles/which-ux-research-methods/ on Sep
+            15, 2025.
+          </p>
+
+          <div className="flex justify-between items-center mt-12">
+            <Link href="/resources/step-3">
+              <p className="font-semibold text-blue-700 cursor-pointer hover:underline">
+                &larr; Previous: Step 3
+              </p>
+            </Link>
+            <Link href="/resources/step-5">
+              <p className="font-semibold text-blue-700 cursor-pointer hover:underline">
+                Next: Step 5 &rarr;
+              </p>
+            </Link>
+          </div>
+        </section>
       </section>
     </article>
   );

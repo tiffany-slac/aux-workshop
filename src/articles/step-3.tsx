@@ -7,6 +7,12 @@ export default function Step3Wireframe() {
       <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
         <ol className="list-none p-0 inline-flex space-x-1">
           <li>
+            <Link href="/resources">
+              <p className="text-blue-700 hover:underline">Resources</p>
+            </Link>
+          </li>
+          <li>/</li>
+          <li>
             <Link href="/resources/get-started">
               <p className="text-blue-700 hover:underline">Getting Started</p>
             </Link>
@@ -63,7 +69,7 @@ export default function Step3Wireframe() {
           alt="Diagram showing one wireframe"
           width={400}
           height={300}
-          className="rounded-lg shadow-md mx-auto my-8"
+          className="rounded-lg mx-auto my-8"
         />
         <p className="leading-relaxed mb-4">
           Wireframes are a way to show the proposed layouts for a page. It
@@ -95,12 +101,12 @@ export default function Step3Wireframe() {
           alt="Diagram showing mutliple wireframes"
           width={600}
           height={500}
-          className="rounded-lg shadow-md mx-auto my-8"
+          className="rounded-lg mx-auto my-8"
         />
         <p className="leading-relaxed">
           Before we get the design in front of users, it should be noted that
-          you aren&apos;t limited to showing one design. Creating multiple
-          layouts can help see what aspects users like or don&apos;t like, and
+          you aren't limited to showing one design. Creating multiple
+          layouts can help see what aspects users like or don't like, and
           you can learn how whether you matched the requirements to their
           workflow.
         </p>
@@ -118,7 +124,7 @@ export default function Step3Wireframe() {
           alt="Diagram showing iterations"
           width={800}
           height={500}
-          className="rounded-lg shadow-md mx-auto my-8"
+          className="rounded-lg mx-auto my-8"
         />
         <p className="leading-relaxed mb-4">
           Once you show users your wireframe, you can iterate based on the
@@ -128,7 +134,7 @@ export default function Step3Wireframe() {
           this is an application modernizing an existing application.
         </p>
         <p className="leading-relaxed mb-4">
-          To help collect feedback from users, and if you&apos;re looking for
+          To help collect feedback from users, and if you're looking for
           something fun, you can create clickable prototypes to get feedback
           without incorporating more design elements. The benefit here is that
           you can test some of those buttons (and their landing) and workflows
@@ -141,10 +147,10 @@ export default function Step3Wireframe() {
           elements into your design.
         </p>
         <p className="leading-relaxed mb-4">
-          This doesn&apos;t have to be time consuming. Actually, it will save
+          This doesn't have to be time consuming. Actually, it will save
           you time and effort by modifying simple designs rather than
           implementing changes in a completely built out application. Walk on
-          over to your user&apos;s office, send a message on your messenger, or
+          over to your user's office, send a message on your messenger, or
           initiate a quick screen share call. You only need 5 minutes, and if
           they give you more, you have their interest.
         </p>
