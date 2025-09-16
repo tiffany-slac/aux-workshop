@@ -4,6 +4,7 @@ import Step2 from "./step-2";
 import Step3 from "./step-3";
 import Step4 from "./step-4";
 import Step5 from "./step-5";
+import Intern from "./interns-approach";
 
 export const articles = [
   {
@@ -41,5 +42,11 @@ export const articles = [
     title: "Step 5: Record Design Decisions",
     description: "Deep dive into Step 5 of the design process.",
     Component: Step5,
+  },
+    {
+    slug: "intern",
+    title: "An Intern's Approach",
+    description: "Read about an intern application of our 5 steps",
+    Component: Intern,
   },
 ];
