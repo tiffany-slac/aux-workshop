@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import { useRef } from "react";
 
@@ -138,12 +139,15 @@ export default function Event1() {
             ].map((src, i) => (
               <div
                 key={i}
-                className="aspect-square w-72 flex-shrink-0 rounded-lg overflow-hidden shadow-sm"
+                className="aspect-square w-72 flex-shrink-0 rounded-lg overflow-hidden shadow-sm relative"
               >
-                <img
+                <Image
                   src={src}
                   alt={`Gallery image ${i + 1}`}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 80vw, 300px" 
+                  priority={i === 0}
                 />
               </div>
             ))}

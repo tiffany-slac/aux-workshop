@@ -1,88 +1,57 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Event2() {
   return (
     <main className="bg-white min-h-screen text-gray-800">
       {/* Hero Section */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col justify-center px-8 md:px-16 text-white">
-        <h1 className="text-4xl font-bold mb-1">2026, hosted by TBA</h1>
-        <p className="text-lg opacity-90">Workshop 2</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-2">
+          2026, hosted by LBNL
+        </h1>
+        <p className="text-lg md:text-xl opacity-90">2nd Annual Accelerator UX Workshop</p>
       </section>
 
       {/* Event Info Section */}
-      <section className="flex flex-col md:flex-row px-8 md:px-16 py-10 gap-10 border-b">
-        {/* Left: Details */}
+      <section className="px-8 md:px-16 py-10 space-y-6 md:space-y-0 md:flex md:gap-10">
+        {/* Left: About the Event */}
         <div className="md:w-3/5 space-y-4">
-          <h2 className="text-2xl font-bold">Event Details</h2>
+          <h2 className="text-2xl font-bold">About the Event</h2>
           <p className="text-base leading-relaxed">
-            Description
+            At this 3-day event, you will meet with your peers to discuss the current state of UI/UX at accelerator facilities and help foster a growing community.
           </p>
+          <p className="text-base leading-relaxed">
+            Are you interested in joining the 2nd annual Accelerator UX Workshop? Fill out our interest form to be notified when registration opens. Please note that due to limited space, registration will be limited to 30 participants.
+          </p>
+          <Link
+            href="https://forms.gle/CsyuJcwiUb4sSN9d9"
+            target="_blank"
+            className="inline-block mt-4 px-5 py-2 bg-[#1e88b6] text-white rounded hover:bg-[#1565a6] transition"
+          >
+            Fill Out Interest Form
+          </Link>
         </div>
 
-        {/* Right: Date / Time / Location */}
+        {/* Right: Event Details */}
         <div className="md:w-2/5 bg-gray-100 p-6 rounded-xl shadow-sm space-y-4">
           <div>
-            <h3 className="font-semibold text-gray-700">Date</h3>
-            <p className="text-gray-600">TBA</p>
+            <h3 className="font-semibold text-gray-700">Where</h3>
+            <p className="text-gray-600">Lawrence Berkeley National Laboratory, Berkeley, CA</p>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-700">Time</h3>
-            <p className="text-gray-600">9:00 AM – 5:00 PM</p>
+            <h3 className="font-semibold text-gray-700">When</h3>
+            <p className="text-gray-600">February 25th–27th, 2026</p>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-700">Location</h3>
-            <p className="text-gray-600">TBA</p>
+            <h3 className="font-semibold text-gray-700">Registration Cost</h3>
+            <p className="text-gray-600">Free</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-700">Contact</h3>
+            <p className="text-gray-600">auxworkshop@gmail.com</p>
           </div>
         </div>
-      </section>
-
-      {/* Agenda Section */}
-      <section className="px-8 md:px-16 py-10 space-y-6">
-        <h2 className="text-2xl font-bold mb-4">Agenda</h2>
-        <div className="space-y-6">
-          {[
-            {
-              date: "Day 1",
-              summary:
-                "Kick off",
-            },
-            {
-              date: "Day 2",
-              summary:
-                "Brainstorming",
-            },
-            {
-              date: "Day 3",
-              summary:
-                "Wrap-up",
-            },
-          ].map((item, index) => (
-            <div key={index} className="flex items-center gap-5">
-              <div className="w-16 h-16 bg-[#1e88b6] text-white rounded-full flex items-center justify-center text-md font-bold shadow-md">
-                {item.date}
-              </div>
-              <p className="text-base leading-relaxed">{item.summary}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Photo Gallery */}
-      <section className="px-8 md:px-16 py-10">
-        <h2 className="text-2xl font-bold mb-4">Photo Gallery</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          <img src="https://via.placeholder.com/300x200" className="rounded-lg shadow-sm" alt="Gallery image" />
-          <img src="https://via.placeholder.com/300x200" className="rounded-lg shadow-sm" alt="Gallery image" />
-          <img src="https://via.placeholder.com/300x200" className="rounded-lg shadow-sm" alt="Gallery image" />
-        </div>
-      </section>
-
-      {/* Related Resources */}
-      <section className="px-8 md:px-16 py-10 border-t bg-gray-50">
-        <h2 className="text-2xl font-bold mb-4">Related Resources</h2>
-        <ul className="list-disc pl-6 space-y-2 text-blue-700">
-          <li>
-            <a href="#" className="hover:underline">View Poster</a>
-          </li>
-        </ul>
       </section>
     </main>
   );

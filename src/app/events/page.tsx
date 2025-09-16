@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const events = [
@@ -33,19 +34,27 @@ export default function EventsPage() {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-4 rounded-lg">
             <div className="w-full md:w-1/6 text-center">
               <p className="text-lg font-bold">2026</p>
-              <p className="text-2xl uppercase text-gray-600">TBA</p>
+              <p className="text-2xl uppercase text-gray-600">FEB</p>
             </div>
-            <div className="w-full md:w-1/3">
-              <img
-                src="https://www.science.org/do/10.1126/science.aal1042/full/iStock-495689014_16x9-1644908617563.jpg"
-                alt="Event"
-                className="w-full h-auto rounded-lg object-cover"
-              />
+            <div className="w-full md:w-1/3 flex flex-col items-center">
+              <div className="relative w-64 md:w-80 lg:w-96 aspect-[4/3]">
+                <Image
+                  src="/lbnl-event.png"
+                  alt="LBNL Campus"
+                  fill
+                  className="rounded-lg object-cover"
+                />
+              </div>
+              <p className="text-xs text-gray-500 mt-1 italic text-center">
+                Photo credit: Lawrence Berkeley Nat'l Lab
+              </p>
             </div>
             <div className="w-full md:w-1/2 space-y-2">
-              <h2 className="text-xl font-semibold">2026, hosted by TBA</h2>
-              <h3 className="text-md text-gray-500">TBA</h3>
-              <p className="text-sm text-gray-600">Address</p>
+              <h2 className="text-xl font-semibold">2026, hosted by LBNL</h2>
+              <h3 className="text-md text-gray-500">February 25-27</h3>
+              <p className="text-sm text-gray-600">
+                6 Cyclotron Rd, Berkeley, CA 94720
+              </p>
               <p className="text-sm text-gray-700">
                 Information on our next event coming soon...
               </p>
@@ -72,17 +81,27 @@ export default function EventsPage() {
                 <p className="text-lg font-bold">2025</p>
                 <p className="text-2xl uppercase text-gray-600">Feb</p>
               </div>
-              <div className="w-full md:w-1/3">
-                <img
-                  src="https://www.science.org/do/10.1126/science.aal1042/full/iStock-495689014_16x9-1644908617563.jpg"
-                  alt="Event"
-                  className="w-full h-auto rounded-lg object-cover"
-                />
+
+              <div className="w-full md:w-1/3 flex flex-col items-center">
+                <div className="relative w-64 md:w-80 lg:w-96 aspect-[4/3]">
+                  <Image
+                    src="/slac-event.jpg"
+                    alt="SLAC Campus"
+                    fill
+                    className="rounded-lg object-cover"
+                  />
+                </div>
+                <p className="text-xs text-gray-500 mt-1 italic text-center">
+                  Photo credit: Olivier Bonin, SLAC National Accelerator
+                  Laboratory
+                </p>
               </div>
               <div className="w-full md:w-1/2 space-y-2">
                 <h2 className="text-xl font-semibold">{event.name}</h2>
                 <h3 className="text-md text-gray-500">February 26-28</h3>
-                <p className="text-sm text-gray-600">2575 Sand Hill Rd, Menlo Park, CA 94025</p>
+                <p className="text-sm text-gray-600">
+                  2575 Sand Hill Rd, Menlo Park, CA 94025
+                </p>
                 <p className="text-sm text-gray-700">
                   The Workshop Launch marked the first gathering...
                 </p>
