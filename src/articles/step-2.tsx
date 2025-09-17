@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Step2Wireframe() {
@@ -76,6 +77,18 @@ export default function Step2Wireframe() {
           process for web-based design, it is essential to tailor UX methods to
           domain-specific cognitive and operational demands.
         </p>
+        <figure className="my-8 text-center">
+          <Image
+            src="/step20.png"
+            alt="Steps of End-User Process"
+            width={800}
+            height={500}
+            className="rounded-lg mx-auto"
+          />
+          <figcaption className="mt-2 text-sm text-gray-600 italic">
+            Figure 1: Steps of End-User Process
+          </figcaption>
+        </figure>
       </section>
 
       <section>
@@ -132,6 +145,18 @@ export default function Step2Wireframe() {
           ensure both intuitive design principles and specific use cases are
           accounted for and accommodated throughout the system.
         </p>
+        <figure className="my-8 text-center">
+          <Image
+            src="/step21.png"
+            alt="General Task Analysis Process"
+            width={800}
+            height={500}
+            className="rounded-lg mx-auto my-8"
+          />
+          <figcaption className="mt-2 text-sm text-gray-600 italic">
+            Figure 2: General Task Analysis Process
+          </figcaption>
+        </figure>
       </section>
 
       <section>
@@ -213,16 +238,22 @@ export default function Step2Wireframe() {
         <h2 className="text-2xl font-semibold mb-3">References</h2>
         <p className="italic text-gray-600">
           Norman, D.A. (2013). The Design of Everyday Things.
-        </p><br></br>
+        </p>
+        <br></br>
         <p className="italic text-gray-600">
           Nielsen, J. (1994). 10 Usability Heuristics for User Interface Design.
-        </p><br></br>
+        </p>
+        <br></br>
         <p className="italic text-gray-600">
-          Endsley, M.R. (1995). Toward a Theory of Situation Awareness in Dynamic Systems.
-        </p><br></br>
+          Endsley, M.R. (1995). Toward a Theory of Situation Awareness in
+          Dynamic Systems.
+        </p>
+        <br></br>
         <p className="italic text-gray-600">
-          Woods, D.D., & Hollnagel, E. (2006). Joint Cognitive Systems: Patterns in Cognitive Systems Engineering.
-        </p><br></br>
+          Woods, D.D., & Hollnagel, E. (2006). Joint Cognitive Systems: Patterns
+          in Cognitive Systems Engineering.
+        </p>
+        <br></br>
         <div className="flex justify-between items-center mt-12">
           <Link href="/resources/step-1">
             <p className="font-semibold text-blue-700 cursor-pointer hover:underline">
