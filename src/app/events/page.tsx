@@ -53,7 +53,7 @@ export default function EventsPage() {
               <h2 className="text-xl font-semibold">2026, hosted by TBA</h2>
               <h3 className="text-md text-gray-500">February 25-27</h3>
               <p className="text-sm text-gray-600">
-                SLAC or ALS
+                SLAC/LBNL (Exact host TBD soon!)
               </p>
               <p className="text-sm text-gray-700">
                 Information on our next event coming soon...

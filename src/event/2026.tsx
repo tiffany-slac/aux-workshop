@@ -8,7 +8,7 @@ export default function Event2() {
       {/* Hero Section */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col justify-center px-8 md:px-16 text-white">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
-          2026, hosted by TBA
+          2026, hosted by TBD
         </h1>
         <p className="text-lg md:text-xl opacity-90">2nd Annual Accelerator UX Workshop</p>
       </section>
@@ -37,7 +37,7 @@ export default function Event2() {
         <div className="md:w-2/5 bg-gray-100 p-6 rounded-xl shadow-sm space-y-4">
           <div>
             <h3 className="font-semibold text-gray-700">Where</h3>
-            <p className="text-gray-600">Lawrence Berkeley National Laboratory, Berkeley, CA</p>
+            <p className="text-gray-600">California (exact location TBD soon!)</p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-700">When</h3>
