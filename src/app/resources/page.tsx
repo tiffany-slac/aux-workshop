@@ -54,7 +54,6 @@ export default function ResourcesPage() {
           className="border p-2"
         >
           <option>All</option>
-          {/* Add category filtering here if you add categories to your article metadata */}
         </select>
       </div>
 

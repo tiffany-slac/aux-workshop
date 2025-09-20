@@ -50,10 +50,10 @@ export default function EventsPage() {
               </p>
             </div>
             <div className="w-full md:w-1/2 space-y-2">
-              <h2 className="text-xl font-semibold">2026, hosted by LBNL</h2>
+              <h2 className="text-xl font-semibold">2026, hosted by TBA</h2>
               <h3 className="text-md text-gray-500">February 25-27</h3>
               <p className="text-sm text-gray-600">
-                6 Cyclotron Rd, Berkeley, CA 94720
+                SLAC or ALS
               </p>
               <p className="text-sm text-gray-700">
                 Information on our next event coming soon...

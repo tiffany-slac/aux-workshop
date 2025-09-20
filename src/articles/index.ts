@@ -46,7 +46,7 @@ export const articles = [
     {
     slug: "intern",
     title: "An Intern's Approach",
-    description: "Read about an intern application of our 5 steps",
+    description: "Read about an intern's application of our 5 steps.",
     Component: Intern,
   },
 ];

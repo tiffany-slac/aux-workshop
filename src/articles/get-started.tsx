@@ -158,7 +158,7 @@ const Article1: React.FC = () => {
         title="How to Get Started"
         author="AUX Team"
         date="April 30, 2025"
-        readTime={5}
+        readTime={2}
       />
       <div className="w-full h-64 rounded-lg bg-white flex items-center justify-center relative">
         <Image

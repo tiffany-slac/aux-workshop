@@ -2,29 +2,51 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
+interface ArticleHeaderProps {
+  title: string;
+  author: string;
+  date: string;
+  readTime: number;
+}
+
+const ArticleHeader: React.FC<ArticleHeaderProps> = ({
+  title,
+  author,
+  date,
+  readTime,
+}) => (
+  <div className="mb-6">
+    <h1 className="text-4xl font-bold">{title}</h1>
+    <div className="text-sm text-gray-600">
+      <span>By {author}</span> | <span>{date}</span> |{" "}
+      <span>{readTime} min read</span>
+    </div>
+  </div>
+);
 
 export default function InternsApproach() {
-//   const [headings, setHeadings] = useState<
-//     { id: string; text: string; level: number }[]
-//   >([]);
+  const [headings, setHeadings] = useState<
+    { id: string; text: string; level: number }[]
+  >([]);
 
-//   useEffect(() => {
-//     // Grab all h2 and h3 headings
-//     const elems = Array.from(
-//       document.querySelectorAll("article h2, article h3")
-//     );
-//     setHeadings(
-//       elems.map((el) => ({
-//         id: el.id,
-//         text: el.textContent || "",
-//         level: el.tagName === "H2" ? 2 : 3,
-//       }))
-//     );
-//   }, []);
+  useEffect(() => {
+    // Grab all h2 and h3 headings
+    const elems = Array.from(
+      document.querySelectorAll("article h2, article h3")
+    );
+    setHeadings(
+      elems.map((el) => ({
+        id: el.id,
+        text: el.textContent || "",
+        level: el.tagName === "H2" ? 2 : 3,
+      }))
+    );
+  }, []);
 
   return (
-    // <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row gap-8">
+    <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row gap-8">
       <article className="max-w-4xl mx-auto p-8 space-y-8">
         <nav className="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex space-x-1">
@@ -38,13 +60,20 @@ export default function InternsApproach() {
           </ol>
         </nav>
 
-        <h1 className="text-4xl font-bold mb-6">ReactEDM - UX Procedure</h1>
+        <ArticleHeader
+          title="ReactEDM - UX Procedure"
+          author="Nicholas Manha, ALS ASPIRES Intern 2025"
+          date="September 17, 2025"
+          readTime={7}
+        />
 
         <p className="text-lg leading-relaxed">
-          This is a blog post showing how the 5 steps from the AUX group were
-          utilized throughout the development process of a web based interface
-          that provides an MEDM control screen interface.
+          This is a blog post showing how the 5 steps from
+          the AUX group were utilized throughout the development process of a
+          web based interface that provides an MEDM control screen interface.
         </p>
+
+        <p>----------</p>
 
         <section id="step1">
           <h2 className="text-2xl font-semibold mb-3">
@@ -286,13 +315,6 @@ export default function InternsApproach() {
             Finally, to display the results of my project, I made a scientific
             poster describing the process and background of why it was made.
           </p>
-          <Image
-            src="/intern8.png"
-            alt="Diagram showing one wireframe"
-            width={400}
-            height={300}
-            className="rounded-lg mx-auto my-8"
-          />
         </section>
 
         <section id="step5">
@@ -301,32 +323,47 @@ export default function InternsApproach() {
           </h2>
           <p className="italic text-gray-600 mb-4">
             Provide a record of how the design was created and why each design
-            decision was made. This document serves as the platform for the next
-            design iteration as well as communicates the benefits of UX! You now
-            know how to perfectly design your system with zero flaws and perfect
-            performance. Congratulations!
+            decision was made.
+          </p>
+          <p className="leading-relaxed mb-4">
+            Finally, to display the results of my project, I made a scientific
+            poster describing the process and background of why it was made.
+          </p>
+          <Image
+            src="/intern8.png"
+            alt="Diagram showing one wireframe"
+            width={400}
+            height={300}
+            className="rounded-lg mx-auto my-8"
+          />
+          <p className="leading-relaxed mb-4">
+            Throughout the project the requirements document was actively filled
+            out with new information and features, helping to explain some of
+            the design decisions and intent. At the end of the project, I also
+            cleaned up the requirements document and clearly marked what was
+            completed.
           </p>
         </section>
       </article>
 
-    //   {/* TOC Sidebar (desktop only) */}
-    //   {headings.length > 0 && (
-    //     <aside className="hidden md:block w-64 flex-shrink-0 sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto border-l border-gray-200 pl-6">
-    //       <h3 className="text-lg font-semibold mb-4">On This Page</h3>
-    //       <ul className="space-y-2">
-    //         {headings.map(({ id, text, level }) => (
-    //           <li key={id} className={level === 3 ? "pl-4" : ""}>
-    //             <a
-    //               href={`#${id}`}
-    //               className="text-gray-700 hover:text-blue-700 block"
-    //             >
-    //               {text}
-    //             </a>
-    //           </li>
-    //         ))}
-    //       </ul>
-    //     </aside>
-    //   )}
-    // </div>
+      {/* TOC Sidebar (desktop only) */}
+      {headings.length > 0 && (
+        <aside className="hidden md:block w-64 flex-shrink-0 sticky top-24 h-[calc(100vh-6rem)] overflow-y-auto border-l border-gray-200 pl-6">
+          <h3 className="text-lg font-semibold mb-4">On This Page</h3>
+          <ul className="space-y-2">
+            {headings.map(({ id, text, level }) => (
+              <li key={id} className={level === 3 ? "pl-4" : ""}>
+                <a
+                  href={`#${id}`}
+                  className="text-gray-700 hover:text-blue-700 block"
+                >
+                  {text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+    </div>
   );
 }
