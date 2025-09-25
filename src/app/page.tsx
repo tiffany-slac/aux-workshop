@@ -100,6 +100,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Google Form Section */}
+      <section className="bg-white py-24 px-6 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Workshop Interest Form
+          </h2>
+          <p className="text-lg text-gray-700 mb-8 text-center">
+            Interested in joining our upcoming workshop? Fill out this form to
+            let us know, and we’ll keep you updated with details and
+            registration information.
+          </p>
+
+          <div className="w-full aspect-[9/16] md:aspect-[16/9] relative">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScFoTrVgCo8De1UYG7IZkDsIW_x6dOpkJ2dKOhed9sCH1yj_w/viewform"
+              className="absolute top-0 left-0 w-full h-full rounded-lg"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Audience Section */}
       <section className="bg-gray-50 py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
