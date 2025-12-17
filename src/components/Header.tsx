@@ -13,18 +13,25 @@ export default function Header() {
   const isHomePage = pathname === "/";
 
   const workshopTextColor = isHomePage ? "text-black" : "text-white";
-  const navTextColor = "text-white";
+
+  // Helper to style active vs inactive links
+  const linkClasses = (href: string) =>
+    `mx-3 transition-colors ${
+      pathname === href
+        ? "font-semibold text-white"
+        : "text-white/70 hover:text-white"
+    }`;
 
   return (
     <header
       className={`
-    top-0 flex items-center z-50 h-20 transition-colors duration-300
-    ${
-      isHomePage
-        ? "bg-transparent md:[background:linear-gradient(to_right,transparent_50%,#1e88b6_50%)]"
-        : "bg-[#1e88b6]"
-    }
-  `}
+        top-0 flex items-center z-50 h-20 transition-colors duration-300
+        ${
+          isHomePage
+            ? "bg-transparent md:[background:linear-gradient(to_right,transparent_50%,#1e88b6_50%)]"
+            : "bg-[#1e88b6]"
+        }
+      `}
     >
       <div className="mx-6 flex items-center justify-between w-full">
         {/* Logo & Title */}
@@ -49,21 +56,12 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center ml-auto">
-          <Link href="/" className={`mx-3 ${navTextColor}`}>
-            Home
-          </Link>
-          <Link href="/events" className={`mx-3 ${navTextColor}`}>
-            Events
-          </Link>
-          <Link href="/resources" className={`mx-3 ${navTextColor}`}>
-            Resources
-          </Link>
-          <Link href="/about" className={`mx-3 ${navTextColor}`}>
-            About Us
-          </Link>
-          <Link href="/contact" className={`mx-3 ${navTextColor}`}>
-            Contact
-          </Link>
+          <Link href="/" className={linkClasses("/")}>Home</Link>
+          <Link href="/activity" className={linkClasses("/activity")}>Activity</Link>
+          <Link href="/events" className={linkClasses("/events")}>Events</Link>
+          <Link href="/resources" className={linkClasses("/resources")}>Resources</Link>
+          <Link href="/about" className={linkClasses("/about")}>About Us</Link>
+          <Link href="/contact" className={linkClasses("/contact")}>Contact</Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -80,39 +78,22 @@ export default function Header() {
       {/* Mobile Nav Drawer */}
       {isOpen && (
         <div className="absolute top-20 left-0 w-full bg-[#1e88b6] flex flex-col items-center py-4 md:hidden z-50">
-          <Link
-            href="/"
-            className={`my-2 ${navTextColor}`}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/" className={linkClasses("/")} onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <Link
-            href="/events"
-            className={`my-2 ${navTextColor}`}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/activity" className={linkClasses("/activity")} onClick={() => setIsOpen(false)}>
+            Activity
+          </Link>
+          <Link href="/events" className={linkClasses("/events")} onClick={() => setIsOpen(false)}>
             Events
           </Link>
-          <Link
-            href="/resources"
-            className={`my-2 ${navTextColor}`}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/resources" className={linkClasses("/resources")} onClick={() => setIsOpen(false)}>
             Resources
           </Link>
-          <Link
-            href="/about"
-            className={`my-2 ${navTextColor}`}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/about" className={linkClasses("/about")} onClick={() => setIsOpen(false)}>
             About Us
           </Link>
-          <Link
-            href="/contact"
-            className={`my-2 ${navTextColor}`}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/contact" className={linkClasses("/contact")} onClick={() => setIsOpen(false)}>
             Contact
           </Link>
         </div>

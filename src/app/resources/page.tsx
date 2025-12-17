@@ -31,7 +31,7 @@ export default function ResourcesPage() {
   return (
     <div>
       {/* Top Hero Section */}
-      <section className="h-[40vh] bg-[#1e88b6] flex flex-col items-center justify-center text-center">
+      <section className="h-[30vh] bg-[#1e88b6] flex flex-col items-center justify-center text-center">
         <h1 className="text-6xl font-bold text-white mb-4">Resources</h1>
         <p className="text-lg text-white max-w-2xl">How-to Guides</p>
       </section>

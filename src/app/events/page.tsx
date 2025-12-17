@@ -14,7 +14,7 @@ const events = [
 export default function EventsPage() {
   return (
     <main className="bg-white min-h-screen">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
           Events
@@ -24,98 +24,76 @@ export default function EventsPage() {
         </p>
       </section>
 
-      {/* Main Content */}
-      <div>
-        <section className="p-4 border-b-2 border-t-2">
-          <p className="text-lg max-w-2xl">Upcoming Events</p>
-        </section>
+      {/* Upcoming */}
+      <section className="p-4 border-b-2 border-t-2">
+        <p className="text-lg max-w-2xl">Upcoming Events</p>
+      </section>
 
-        <section className="p-6 space-y-10">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-4 rounded-lg">
-            <div className="w-full md:w-1/6 text-center">
-              <p className="text-lg font-bold">2026</p>
-              <p className="text-2xl uppercase text-gray-600">FEB</p>
-            </div>
-            <div className="w-full md:w-1/3 flex flex-col items-center">
-              <div className="relative w-64 md:w-80 lg:w-96 aspect-[4/3]">
-                <Image
-                  src="/lbnl-event.png"
-                  alt="LBNL Campus"
-                  fill
-                  className="rounded-lg object-cover"
-                />
-              </div>
-              <p className="text-xs text-gray-500 mt-1 italic text-center">
-                Photo credit: Lawrence Berkeley Nat'l Lab
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 space-y-2">
-              <h2 className="text-xl font-semibold">2026, hosted by TBA</h2>
-              <h3 className="text-md text-gray-500">February 25-27</h3>
-              <p className="text-sm text-gray-600">
-                SLAC/LBNL (Exact host TBD soon!)
-              </p>
-              <p className="text-sm text-gray-700">
-                Information on our next event coming soon...
-              </p>
-              <Link
-                href={`/events/2026`}
-                className="mt-2 text-blue-600 hover:underline font-medium inline-block"
-              >
-                View Event Details →
-              </Link>
-            </div>
+      <section className="p-6 flex flex-col items-center gap-6">
+        <Link
+          href="/events/2026"
+          className="w-full max-w-3xl flex items-center gap-4 rounded-xl shadow hover:shadow-lg transition bg-white p-4"
+        >
+          {/* Image */}
+          <div className="relative w-40 h-28 flex-shrink-0">
+            <Image
+              src="/lbnl-event.png"
+              alt="LBNL Campus"
+              fill
+              className="rounded-lg object-cover"
+            />
           </div>
-        </section>
-        <section className="p-4 border-b-2 border-t-2">
-          <p className="text-lg max-w-2xl">Past Events</p>
-        </section>
 
-        <section className="p-6 space-y-10">
-          {events.map((event) => (
-            <div
-              key={event.id}
-              className="flex flex-col md:flex-row items-start md:items-center gap-6 p-4 rounded-lg"
-            >
-              <div className="w-full md:w-1/6 text-center">
-                <p className="text-lg font-bold">2025</p>
-                <p className="text-2xl uppercase text-gray-600">Feb</p>
-              </div>
+          {/* Content */}
+          <div className="flex-1">
+            <p className="text-xl text-gray-600 font-semibold">
+              2026, hosted by LBNL
+            </p>
+            <p className="text-sm text-gray-500 mt-1">February 25–27</p>
+            <p className="text-sm text-gray-500 mt-1">
+              1 Cyclotron Road, Berkeley, CA
+            </p>
+            <p className="text-blue-600 text-sm mt-1">View Event Details →</p>
+          </div>
+        </Link>
+      </section>
 
-              <div className="w-full md:w-1/3 flex flex-col items-center">
-                <div className="relative w-64 md:w-80 lg:w-96 aspect-[4/3]">
-                  <Image
-                    src="/slac-event.jpg"
-                    alt="SLAC Campus"
-                    fill
-                    className="rounded-lg object-cover"
-                  />
-                </div>
-                <p className="text-xs text-gray-500 mt-1 italic text-center">
-                  Photo credit: Olivier Bonin, SLAC National Accelerator
-                  Laboratory
-                </p>
-              </div>
-              <div className="w-full md:w-1/2 space-y-2">
-                <h2 className="text-xl font-semibold">{event.name}</h2>
-                <h3 className="text-md text-gray-500">February 26-28</h3>
-                <p className="text-sm text-gray-600">
-                  2575 Sand Hill Rd, Menlo Park, CA 94025
-                </p>
-                <p className="text-sm text-gray-700">
-                  The Workshop Launch marked the first gathering...
-                </p>
-                <Link
-                  href={`/events/${event.slug}`}
-                  className="mt-2 text-blue-600 hover:underline font-medium inline-block"
-                >
-                  View Event Details →
-                </Link>
-              </div>
+      {/* Past */}
+      <section className="p-4 border-b-2 border-t-2">
+        <p className="text-lg max-w-2xl">Past Events</p>
+      </section>
+
+      <section className="p-6 flex flex-col items-center gap-6">
+        {events.map((event) => (
+          <Link
+            key={event.id}
+            href={`/events/${event.slug}`}
+            className="w-full max-w-3xl flex items-center gap-4 rounded-xl shadow hover:shadow-lg transition bg-white p-4"
+          >
+            {/* Image */}
+            <div className="relative w-40 h-28 flex-shrink-0">
+              <Image
+                src="/slac-event.jpg"
+                alt="SLAC Campus"
+                fill
+                className="rounded-lg object-cover"
+              />
             </div>
-          ))}
-        </section>
-      </div>
+
+            {/* Content */}
+            <div className="flex-1">
+              <p className="text-xl text-gray-600 font-semibold">
+                2025, hosted by SLAC
+              </p>
+              <p className="text-sm text-gray-500 mt-1">February 26–28</p>
+              <p className="text-sm text-gray-500 mt-1">
+                2575 Sand Hill Rd, Menlo Park, CA
+              </p>
+              <p className="text-blue-600 text-sm mt-1">View Event Details →</p>
+            </div>
+          </Link>
+        ))}
+      </section>
     </main>
   );
 }
