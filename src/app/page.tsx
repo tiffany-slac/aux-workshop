@@ -158,7 +158,7 @@ export default function HomePage() {
         <Countdown />
 
         <Link
-          href="https://forms.gle/CsyuJcwiUb4sSN9d9"
+          href="https://indico.physics.lbl.gov/event/3289/registrations/66/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 bg-[#1e88b6] text-white text-base py-2 px-6 rounded hover:bg-[#1565a6] transition inline-block text-center"

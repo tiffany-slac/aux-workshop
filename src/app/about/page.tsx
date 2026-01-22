@@ -59,8 +59,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col items-center justify-center text-center px-4">
         <h1
-          className="text
-        -5xl md:text-6xl font-bold text-white mb-4"
+          className="text-5xl md:text-6xl font-bold text-white mb-4"
         >
           About Us
         </h1>
@@ -75,7 +74,7 @@ export default function About() {
           {team.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center bg-gray-50 rounded-xl p-6 shadow hover:shadow-md transition"
+              className="flex flex-col items-center text-center rounded-xl p-6 hover:shadow-md transition"
             >
               <div className="relative mb-4 h-56 w-40 overflow-hidden rounded-3xl">
                 <Image

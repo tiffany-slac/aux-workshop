@@ -29,16 +29,8 @@ export default function Event2() {
             Are you interested in joining the 2nd annual Accelerator UX
             Workshop? Fill out our interest form to be notified when
             registration opens. Please note that due to limited space,
-            registration will be limited to 30 participants.
+            registration will be limited.
           </p>
-
-          <Link
-            href="https://forms.gle/CsyuJcwiUb4sSN9d9"
-            target="_blank"
-            className="inline-block mt-4 px-5 py-2 bg-[#1e88b6] text-white rounded hover:bg-[#1565a6] transition mr-4"
-          >
-            Interest Form
-          </Link> 
 
           <Link
             href="https://indico.physics.lbl.gov/event/3289/"
