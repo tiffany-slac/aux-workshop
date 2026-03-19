@@ -24,9 +24,9 @@ export default function HomePage() {
               Welcome to a Community of Guidance and Support
             </p>
 
-            <Link href="/events/2026" passHref>
+            <Link href="/events/nobugs2026" passHref>
               <button className="mt-4 bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
-                View Upcoming Workshop
+                View Upcoming Satellite Workshop
               </button>
             </Link>
           </div>
@@ -145,25 +145,22 @@ export default function HomePage() {
       {/* SECTION 4 — NEXT WORKSHOP */}
       <section className="bg-white py-24 px-6 md:px-16 text-center">
         <p className="text-lg font-semibold text-[#1e88b6] mb-2 uppercase tracking-wide">
-          Next Workshop
+          Next Event
         </p>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AUX Workshop 2 — February 26, 2026
+          Satellite Workshop at NoBugs
         </h2>
         <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-          Save the date and stay tuned for agenda details, venue information,
-          and registration updates.
+          09.25.2026 | 8:00AM - 12:00PM | DESY Campus, Hamburg, Germany
         </p>
 
-        <Countdown />
-
         <Link
-          href="https://indico.physics.lbl.gov/event/3289/registrations/66/"
+          href="https://nobugs2026.xfel.eu/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 bg-[#1e88b6] text-white text-base py-2 px-6 rounded hover:bg-[#1565a6] transition inline-block text-center"
         >
-          Register Here
+          Conference Details
         </Link>
       </section>
 

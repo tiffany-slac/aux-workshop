@@ -1,17 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-
-const events = [
-  {
-    id: 1,
-    name: "2025, hosted by SLAC",
-    slug: "2025",
-  },
-];
+import EventCard from "../../components/EventCard";
+import { events } from "../data/events";
 
 export default function EventsPage() {
+  const upcomingEvents = events.filter((e) => e.status === "upcoming");
+  const pastEvents = events.filter((e) => e.status === "past");
+  
   return (
     <main className="bg-white min-h-screen">
       {/* Hero */}
@@ -30,32 +25,9 @@ export default function EventsPage() {
       </section>
 
       <section className="p-6 flex flex-col items-center gap-6">
-        <Link
-          href="/events/2026"
-          className="w-full max-w-3xl flex items-center gap-4 rounded-xl shadow hover:shadow-lg transition bg-white p-4"
-        >
-          {/* Image */}
-          <div className="relative w-40 h-28 flex-shrink-0">
-            <Image
-              src="/lbnl-event.png"
-              alt="LBNL Campus"
-              fill
-              className="rounded-lg object-cover"
-            />
-          </div>
-
-          {/* Content */}
-          <div className="flex-1">
-            <p className="text-xl text-gray-600 font-semibold">
-              2026, hosted by LBNL
-            </p>
-            <p className="text-sm text-gray-500 mt-1">February 25–27</p>
-            <p className="text-sm text-gray-500 mt-1">
-              1 Cyclotron Road, Berkeley, CA
-            </p>
-            <p className="text-blue-600 text-sm mt-1">View Event Details →</p>
-          </div>
-        </Link>
+        {upcomingEvents.map((event) => (
+          <EventCard key={event.id} event={event} />
+        ))}
       </section>
 
       {/* Past */}
@@ -64,34 +36,8 @@ export default function EventsPage() {
       </section>
 
       <section className="p-6 flex flex-col items-center gap-6">
-        {events.map((event) => (
-          <Link
-            key={event.id}
-            href={`/events/${event.slug}`}
-            className="w-full max-w-3xl flex items-center gap-4 rounded-xl shadow hover:shadow-lg transition bg-white p-4"
-          >
-            {/* Image */}
-            <div className="relative w-40 h-28 flex-shrink-0">
-              <Image
-                src="/slac-event.jpg"
-                alt="SLAC Campus"
-                fill
-                className="rounded-lg object-cover"
-              />
-            </div>
-
-            {/* Content */}
-            <div className="flex-1">
-              <p className="text-xl text-gray-600 font-semibold">
-                2025, hosted by SLAC
-              </p>
-              <p className="text-sm text-gray-500 mt-1">February 26–28</p>
-              <p className="text-sm text-gray-500 mt-1">
-                2575 Sand Hill Rd, Menlo Park, CA
-              </p>
-              <p className="text-blue-600 text-sm mt-1">View Event Details →</p>
-            </div>
-          </Link>
+        {pastEvents.map((event) => (
+          <EventCard key={event.id} event={event} />
         ))}
       </section>
     </main>

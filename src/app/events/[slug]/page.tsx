@@ -1,6 +1,5 @@
-// dynamic events page, renders based on slug
 import { notFound } from "next/navigation";
-import { event } from "@/event";
+import { events } from "@/app/data/events";
 
 export default async function EventPage({
   params,
@@ -8,9 +7,24 @@ export default async function EventPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const eventObj = event.find((a) => a.slug === slug);
-  if (!eventObj) return notFound();
 
-  const { Component } = eventObj;
-  return <Component />;
+  const event = events.find((e) => e.slug === slug);
+  if (!event) return notFound();
+
+  let Content = null;
+
+  try {
+    const mod = await import(`@/app/events/event-articles/${slug}`);
+    Content = mod.default;
+  } catch (err) {
+    Content = null;
+  }
+
+  return <main>
+    {Content ? <Content /> : (
+      <p className="text-gray-500">
+        Detailed event article coming soon.
+      </p>
+    )}
+  </main>;
 }
