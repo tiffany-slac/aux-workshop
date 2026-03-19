@@ -19,13 +19,13 @@ export default function ResourcesPage() {
   const articlesPerPage = 9;
 
   const filteredArticles = articles.filter((article) =>
-    article.title.toLowerCase().includes(search.toLowerCase())
+    article.title.toLowerCase().includes(search.toLowerCase()),
   );
 
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
   const displayedArticles = filteredArticles.slice(
     (currentPage - 1) * articlesPerPage,
-    currentPage * articlesPerPage
+    currentPage * articlesPerPage,
   );
 
   return (
@@ -37,49 +37,81 @@ export default function ResourcesPage() {
       </section>
 
       {/* Search and Filter */}
-      <div className="mx-6 p-4 flex justify-between items-center">
-        <div className="relative w-1/3">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-          <input
-            type="text"
-            placeholder="Search..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="border p-2 pl-10 w-full"
-          />
-        </div>
-        <select
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-          className="border p-2"
-        >
-          <option>All</option>
-        </select>
-      </div>
-
-      {/* Articles Grid */}
-      <div className="mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-        {displayedArticles.map((article, index) => (
-          <div
-            key={article.slug}
-            onClick={() => router.push(`/resources/${article.slug}`)}
-            className={`border rounded-lg shadow-lg cursor-pointer flex flex-col overflow-hidden`}
-          >
-            {/* Top gradient header */}
-            <div
-              className={`h-40 flex items-center justify-center text-xl font-bold text-white ${
-                gradients[index % gradients.length]
-              }`}
-            >
-            </div>
-
-            {/* Bottom content */}
-            <div className="flex-1 p-4 bg-white text-gray-700">
-              <h2 className="text-xl font-bold mb-2">{article.title}</h2>
-              <p>{article.description}</p>
-            </div>
+      <div className="px-6 lg:px-12 max-w-6xl mx-auto">
+        <div className="pt-4 flex justify-between items-center">
+          <div className="relative w-1/3">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+            <input
+              type="text"
+              placeholder="Search..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="border p-2 pl-10 w-full"
+            />
           </div>
-        ))}
+          <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="border p-2"
+          >
+            <option>All</option>
+          </select>
+        </div>
+
+        {/* Articles Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
+          {displayedArticles.map((article) => (
+            <div
+              key={article.slug}
+              onClick={() => router.push(`/resources/${article.slug}`)}
+              className="bg-white overflow-hidden cursor-pointer transition-all duration-200
+                   shadow-md hover:shadow-lg hover:-translate-y-1 flex flex-col"
+            >
+              {/* Image */}
+              <div className="aspect-[21/9] w-full">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Content */}
+              <div className="p-5 flex flex-col justify-between flex-1">
+                <div className="space-y-2">
+                  {article.category && (
+                    <p className="text-xs font-semibold text-purple-600">
+                      {article.category}
+                    </p>
+                  )}
+
+                  <div className="flex items-start gap-2">
+                    <h2 className="text-lg font-semibold text-gray-900 line-clamp-2 flex-1">
+                      {article.title}
+                    </h2>
+
+                    <svg
+                      className="w-4 h-4 mt-1 shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 17L17 7M17 7H7M17 7V17"
+                        stroke="#101828"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {article.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Pagination */}
