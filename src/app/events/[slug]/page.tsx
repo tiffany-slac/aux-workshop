@@ -1,6 +1,16 @@
 import { notFound } from "next/navigation";
 import { events } from "@/app/data/events";
 
+export async function generateStaticParams() {
+  return [
+    { slug: "nobugs2026" },
+    { slug: "aux2027" },
+    { slug: "aux2026" },
+    { slug: "icalepcs2025" },
+    { slug: "aux2025" },
+  ];
+}
+
 export default async function EventPage({
   params,
 }: {
