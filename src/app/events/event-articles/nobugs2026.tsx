@@ -7,7 +7,7 @@ export default function Nobugs2026() {
     <main className="bg-white min-h-screen text-gray-800">
       {/* Hero Section */}
       <section className="h-[30vh] bg-[#1e88b6] flex flex-col justify-center px-8 md:px-16 text-white">
-        <h1 className="text-4xl font-bold mb-1">NoBugs 2026, hosted by XFEL</h1>
+        <h1 className="text-4xl font-bold mb-1">NOBUGS 2026, hosted by XFEL</h1>
         <p className="text-lg opacity-90">Satellite Workshop</p>
       </section>
 
@@ -19,7 +19,7 @@ export default function Nobugs2026() {
 
           <p className="text-base leading-relaxed">
             The AUX group's next event will be hosting a satellite meeting in
-            September at NoBUGS 2026 in Hamburg, Germany. Following the success
+            September at NOBUGS 2026 in Hamburg, Germany. Following the success
             of this year’s event, the team is excited to refine its hands-on
             training to better serve and support the accelerator community.
           </p>

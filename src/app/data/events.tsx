@@ -14,7 +14,7 @@ export type EventItem = {
 export const events: EventItem[] = [
   {
     id: 5,
-    title: "NoBugs 2026, hosted by XFEL",
+    title: "NOBUGS 2026, hosted by XFEL",
     date: "September 25",
     location: "DESY Campus, Hamburg, Germany",
     slug: "nobugs2026",

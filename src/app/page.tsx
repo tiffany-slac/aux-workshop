@@ -148,14 +148,14 @@ export default function HomePage() {
           Next Event
         </p>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Satellite Workshop at NoBugs
+          Satellite Workshop at NOBUGS
         </h2>
         <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
           09.25.2026 | 8:00AM - 12:00PM | DESY Campus, Hamburg, Germany
         </p>
 
         <Link
-          href="https://nobugs2026.xfel.eu/"
+          href="https://indico.xfel.eu/event/2/page/4-ux-workshop"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 bg-[#1e88b6] text-white text-base py-2 px-6 rounded hover:bg-[#1565a6] transition inline-block text-center"
