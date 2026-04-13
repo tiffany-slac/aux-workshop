@@ -40,6 +40,7 @@ export default function HomePage() {
               src="/AUX_landingpage.png"
               alt="UI/UX Design"
               fill
+              priority
               className="object-contain"
             />
 
@@ -124,21 +125,13 @@ export default function HomePage() {
           A growing collaboration between accelerator laboratories committed to
           advancing UI/UX for control and experiment systems.
         </p>
-
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-14 px-5">
-          {["berkeley.png", "fnal.png", "inl.png", "slac.png"].map(
-            (logo, index) => (
-              <div key={index} className="flex items-center justify-center">
-                <Image
-                  src={`/${logo}`}
-                  alt={`${logo} logo`}
-                  width={160}
-                  height={100}
-                  className="object-cover"
-                />
-              </div>
-            )
-          )}
+        <div className="relative w-full h-[600px] mx-auto">
+          <Image
+            src="/map.png"
+            alt="Map of participating laboratories"
+            fill
+            className="object-contain"
+          />
         </div>
       </section>
 

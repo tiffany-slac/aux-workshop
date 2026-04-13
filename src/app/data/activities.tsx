@@ -9,6 +9,58 @@ export type Activity = {
 
 export const activities: Activity[] = [
   {
+    id: 8,
+    date: "Apr 15, 2026",
+    title: "Collaborator meeting interest email sent",
+    details: (
+      <div className="space-y-4">
+        <p>
+          An announcement email was sent to AUX participants with details for
+          the first collaborator meeting, including the proposed structure and
+          goals for ongoing collaboration.
+        </p>
+
+        <p>
+          Meetings are planned as 30-minute sessions featuring brief updates on
+          current work and upcoming workshop planning, followed by open
+          discussion.
+        </p>
+
+        <p>
+          Scheduling information, including a proposed recurring time and
+          considerations for international time zones, along with the AUX
+          website and virtual meeting details, were also shared.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 7,
+    date: "Mar 4, 2026",
+    title: "AUX 2026 — Workshop follow-up meeting sent: feedback and photos",
+    details: (
+      <div className="space-y-4">
+        <p>
+          The AUX workshop hosts would like to thank everyone who attended the
+          2026 Accelerate UX Workshop! We had a great time meeting people and
+          learning about the different approaches to UI/UX and software
+          development at everyone’s facility. We would ask if you have a moment
+          to please respond to this quick survey about the workshop (want
+          something different at the next workshop? Here’s your chance to let us
+          know!)
+        </p>
+        <p>
+          We have also uploaded some videos and slides from the AUX group on the
+          indico page, to view them go to the timetable and click the paperclip
+          icon next to the session. ALS staff took lots of great photos that you
+          can check out on the Google album. If you did not receive this email,
+          but need the link to the survey or photos, please reach out to the AUX
+          working group.
+        </p>
+      </div>
+    ),
+  },
+  {
     id: 6,
     date: "Feb 25-27, 2025",
     title: "AUX 2026 — Event",

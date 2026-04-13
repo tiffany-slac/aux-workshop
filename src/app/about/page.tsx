@@ -68,8 +68,18 @@ export default function About() {
         </p>
       </section>
 
+      {/* Info */}
+      <section className="pt-12 px-6 flex flex-col items-center">
+        <p className="text-lg text-gray-700 max-w-3xl">
+          This working group is a collaborative effort between INL, FNAL, LBNL, and
+          SLAC, aimed at fostering knowledge sharing and improving operational
+          efficiency. Launched in 2025, this initiative focuses on the importance of UI/UX
+          at accelerator facilities. 
+        </p>
+      </section>
+
       {/* Team Profiles */}
-      <section className="py-20 px-6 bg-white">
+      <section className="p-20 px-6 bg-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {team.map((member, index) => (
             <div

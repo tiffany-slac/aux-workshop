@@ -59,9 +59,10 @@ export default function Header() {
           <Link href="/" className={linkClasses("/")}>Home</Link>
           <Link href="/activity" className={linkClasses("/activity")}>Activity</Link>
           <Link href="/events" className={linkClasses("/events")}>Events</Link>
+          <Link href="/calendar" className={linkClasses("/calendar")}>Calendar</Link>
           <Link href="/resources" className={linkClasses("/resources")}>Resources</Link>
           <Link href="/about" className={linkClasses("/about")}>About Us</Link>
-          <Link href="/contact" className={linkClasses("/contact")}>Contact</Link>
+          {/* <Link href="/contact" className={linkClasses("/contact")}>Contact</Link> */}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -87,15 +88,18 @@ export default function Header() {
           <Link href="/events" className={linkClasses("/events")} onClick={() => setIsOpen(false)}>
             Events
           </Link>
+          <Link href="/calendar" className={linkClasses("/calendar")} onClick={() => setIsOpen(false)}>
+            Calendar
+          </Link>
           <Link href="/resources" className={linkClasses("/resources")} onClick={() => setIsOpen(false)}>
             Resources
           </Link>
           <Link href="/about" className={linkClasses("/about")} onClick={() => setIsOpen(false)}>
             About Us
           </Link>
-          <Link href="/contact" className={linkClasses("/contact")} onClick={() => setIsOpen(false)}>
+          {/* <Link href="/contact" className={linkClasses("/contact")} onClick={() => setIsOpen(false)}>
             Contact
-          </Link>
+          </Link> */}
         </div>
       )}
     </header>
