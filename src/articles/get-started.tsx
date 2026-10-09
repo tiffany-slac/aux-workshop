@@ -162,7 +162,7 @@ const Article1: React.FC = () => {
       />
       <div className="w-full h-64 rounded-lg bg-white flex items-center justify-center relative">
         <Image
-          src="/roadmap.svg"
+          src="/Articles/roadmap.svg"
           alt="Roadmap"
           fill 
           className="object-contain"

@@ -79,7 +79,7 @@ export default function Step2Wireframe() {
         </p>
         <figure className="my-8 text-center">
           <Image
-            src="/step20.png"
+            src="/Articles/step20.png"
             alt="Steps of End-User Process"
             width={800}
             height={500}
@@ -147,7 +147,7 @@ export default function Step2Wireframe() {
         </p>
         <figure className="my-8 text-center">
           <Image
-            src="/step21.png"
+            src="/Articles/step21.png"
             alt="General Task Analysis Process"
             width={800}
             height={500}

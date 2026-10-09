@@ -117,7 +117,7 @@ export default function Step4Wireframe() {
           The following steps highlight what goes into validation.
         </p>
         <Image
-          src="/step40.jpg"
+          src="/Articles/step40.jpg"
           alt="Diagram showing one wireframe"
           width={800}
           height={300}
@@ -149,7 +149,7 @@ export default function Step4Wireframe() {
           validation.
         </p>
         <Image
-          src="/step41.png"
+          src="/Articles/step41.png"
           alt="Diagram showing one wireframe"
           width={800}
           height={300}

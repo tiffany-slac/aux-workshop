@@ -65,7 +65,7 @@ export default function Step3Wireframe() {
           What do we mean by wireframe?
         </h2>
         <Image
-          src="/step30.png"
+          src="/Articles/step30.png"
           alt="Diagram showing one wireframe"
           width={400}
           height={300}
@@ -97,7 +97,7 @@ export default function Step3Wireframe() {
       <section>
         <h2 className="text-2xl font-semibold mb-3">Multiple wireframes</h2>
         <Image
-          src="/step31.png"
+          src="/Articles/step31.png"
           alt="Diagram showing mutliple wireframes"
           width={600}
           height={500}
@@ -120,7 +120,7 @@ export default function Step3Wireframe() {
       <section>
         <h2 className="text-2xl font-semibold mb-3">Iteration</h2>
         <Image
-          src="/step32.png"
+          src="/Articles/step32.png"
           alt="Diagram showing iterations"
           width={800}
           height={500}

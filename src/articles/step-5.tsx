@@ -146,7 +146,7 @@ export default function Step5Wireframe() {
           the past.
         </p>
         <Image
-          src="/step50.png"
+          src="/Articles/step50.png"
           alt="Diagram showing step 5 example"
           width={300}
           height={300}
@@ -168,7 +168,7 @@ export default function Step5Wireframe() {
         </p>
 
         <Image
-          src="/step51.png"
+          src="/Articles/step51.png"
           alt="Diagram showing step 5 example"
           width={300}
           height={300}

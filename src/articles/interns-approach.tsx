@@ -138,7 +138,7 @@ export default function InternsApproach() {
             their input into the document.
           </p>
           <Image
-            src="/intern1.png"
+            src="/Articles/intern1.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
@@ -153,7 +153,7 @@ export default function InternsApproach() {
             a dropdown.
           </p>
           <Image
-            src="/intern2.png"
+            src="/Articles/intern2.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
@@ -183,14 +183,14 @@ export default function InternsApproach() {
             of my software.
           </p>
           <Image
-            src="/intern3.png"
+            src="/Articles/intern3.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
             className="rounded-lg mx-auto my-8"
           />
           <Image
-            src="/intern4.png"
+            src="/Articles/intern4.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
@@ -246,7 +246,7 @@ export default function InternsApproach() {
             necessarily open windows).
           </p>
           <Image
-            src="/intern5.png"
+            src="/Articles/intern5.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
@@ -258,7 +258,7 @@ export default function InternsApproach() {
             to gather feedback and determine which designs were most effective.
           </p>
           <Image
-            src="/intern6.png"
+            src="/Articles/intern6.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
@@ -305,7 +305,7 @@ export default function InternsApproach() {
             scientists.
           </p>
           <Image
-            src="/intern7.png"
+            src="/Articles/intern7.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
@@ -330,7 +330,7 @@ export default function InternsApproach() {
             poster describing the process and background of why it was made.
           </p>
           <Image
-            src="/intern8.png"
+            src="/Articles/intern8.png"
             alt="Diagram showing one wireframe"
             width={400}
             height={300}
