@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Accelerate UX Workshop",
+  title: "Accelerate UX Working Group",
   description: "A community initiative to improve UI/UX in accelerator labs.",
   icons: {
     icon: "/favicon.png",

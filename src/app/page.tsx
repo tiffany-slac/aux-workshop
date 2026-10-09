@@ -24,9 +24,9 @@ export default function HomePage() {
               Welcome to a Community of Guidance and Support
             </p>
 
-            <Link href="/events/nobugs2026" passHref>
+            <Link href="/events/aux2027" passHref>
               <button className="mt-4 bg-[#1e88b6] text-white text-base py-2 px-5 rounded hover:bg-[#1565a6] transition">
-                View Upcoming Satellite Workshop
+                View Upcoming Workshop
               </button>
             </Link>
           </div>
@@ -141,19 +141,17 @@ export default function HomePage() {
           Next Event
         </p>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Satellite Workshop at NOBUGS
+          AUX Workshop 3
         </h2>
         <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-          09.25.2026 | 8:00AM - 12:00PM | DESY Campus, Hamburg, Germany
+          02.24.2027 – 02.26.2027 | 3rd Annual Accelerate UX Workshop
         </p>
 
         <Link
-          href="https://indico.xfel.eu/event/2/page/4-ux-workshop"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/events/aux2027"
           className="mt-8 bg-[#1e88b6] text-white text-base py-2 px-6 rounded hover:bg-[#1565a6] transition inline-block text-center"
         >
-          Conference Details
+          Event Details
         </Link>
       </section>
 

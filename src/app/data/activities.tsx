@@ -9,6 +9,38 @@ export type Activity = {
 
 export const activities: Activity[] = [
   {
+    id: 9,
+    date: "Sept 25, 2026",
+    title: "NOBUGS 2026 — Satellite Meeting",
+    details: (
+      <div className="space-y-4">
+        <p>
+          The AUX Working Group hosted a half-day satellite workshop at NOBUGS
+          2026 in Hamburg, Germany, bringing together 37 participants
+          representing 17 different labs.
+        </p>
+        <p>
+          Rather than a presentation-heavy format, the session focused on
+          discussion and hands-on activities covering user research,
+          requirements gathering, and analyzing UX workflows. Attendees used
+          Figma to explore how design tools can help think through and
+          communicate design decisions.
+        </p>
+        <p>
+          The workshop opened with short talks from members of the AUX Working
+          Group before moving into the interactive portion of the session.
+        </p>
+        <p>
+          View the full article{" "}
+          <a href="/events/nobugs2026" className="text-[#1e88b6] underline">
+            here
+          </a>
+          .
+        </p>
+      </div>
+    ),
+  },
+  {
     id: 8,
     date: "Apr 15, 2026",
     title: "Collaborator meeting interest email sent",
@@ -74,7 +106,7 @@ export const activities: Activity[] = [
   },
   {
     id: 6,
-    date: "Feb 25-27, 2025",
+    date: "Feb 25-27, 2026",
     title: "AUX 2026 — Event",
     details: (
       <div className="space-y-4">

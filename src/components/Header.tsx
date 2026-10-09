@@ -49,7 +49,7 @@ export default function Header() {
             <p
               className={`text-lg sm:text-2xl mx-3 cursor-pointer ${workshopTextColor}`}
             >
-              Accelerate UX Workshop
+              Accelerate UX Working Group
             </p>
           </Link>
         </div>

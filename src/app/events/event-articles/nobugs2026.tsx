@@ -18,13 +18,13 @@ export default function Nobugs2026() {
           <h2 className="text-3xl font-bold">Event Overview</h2>
 
           <p className="text-base leading-relaxed">
-            The AUX group's next event will be hosting a satellite meeting in
+            The AUX group hosted a satellite meeting in
             September at NOBUGS 2026 in Hamburg, Germany. Following the success
-            of this year’s event, the team is excited to refine its hands-on
+            of prior events, the team refined its hands-on
             training to better serve and support the accelerator community.
           </p>
           <p className="text-base leading-relaxed">
-            The satellite workshop will be a half-day event tentatively scheduled for Friday 09/25/2026 morning.
+            The satellite workshop was a half-day event held on Friday 09/25/2026 morning.
           </p>
         </div>
       </section>
