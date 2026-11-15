@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { activities } from "./data/activities";
 import Countdown from "../components/Countdown";
+
+const LabMap = dynamic(() => import("../components/LabMap"), { ssr: false });
 
 export default function HomePage() {
   return (
@@ -125,13 +128,8 @@ export default function HomePage() {
           A growing collaboration between accelerator laboratories committed to
           advancing UI/UX for control and experiment systems.
         </p>
-        <div className="relative w-full h-[600px] mx-auto">
-          <Image
-            src="/map.png"
-            alt="Map of participating laboratories"
-            fill
-            className="object-contain"
-          />
+        <div className="w-full max-w-5xl h-[500px] mx-auto rounded-xl overflow-hidden shadow-md">
+          <LabMap />
         </div>
       </section>
 
