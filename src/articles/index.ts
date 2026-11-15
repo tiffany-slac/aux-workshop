@@ -6,7 +6,17 @@ import Step4 from "./step-4";
 import Step5 from "./step-5";
 import Intern from "./interns-approach";
 
-export const articles = [
+export type Article = {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  lab?: string;
+  Component: React.FC;
+};
+
+export const articles: Article[] = [
   {
     slug: "get-started",
     title: "Getting Started",
@@ -55,12 +65,13 @@ export const articles = [
     category: "Design Process",
     Component: Step5,
   },
-    {
+  {
     slug: "intern",
     title: "An Intern's Approach",
     description: "Read about an intern's application of our 5 steps.",
     image: "/ResourceCards/article7.svg",
     category: "Case Study",
+    lab: "LBNL",
     Component: Intern,
   },
 ];

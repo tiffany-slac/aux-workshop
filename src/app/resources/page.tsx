@@ -68,21 +68,21 @@ export default function ResourcesPage() {
                    shadow-md hover:shadow-lg hover:-translate-y-1 flex flex-col"
             >
               {/* Image */}
-              <div className="aspect-[21/9] w-full">
+              <div className="relative aspect-[21/9] w-full">
                 <img
                   src={article.image}
                   alt={article.title}
                   className="w-full h-full object-cover"
                 />
+                {article.lab && (
+                  <span className="absolute top-2 right-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
+                    {article.lab}
+                  </span>
+                )}
               </div>
               {/* Content */}
               <div className="p-5 flex flex-col justify-between flex-1">
                 <div className="space-y-2">
-                  {article.category && (
-                    <p className="text-xs font-semibold text-purple-600">
-                      {article.category}
-                    </p>
-                  )}
 
                   <div className="flex items-start gap-2">
                     <h2 className="text-lg font-semibold text-gray-900 line-clamp-2 flex-1">
