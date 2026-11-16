@@ -1,4 +1,4 @@
-export type EventStatus = "upcoming" | "past";
+export type EventStatus = "upcoming" | "past" | "cancelled";
 export type EventType = "in-person" | "virtual";
 
 export type EventItem = {
@@ -8,14 +8,49 @@ export type EventItem = {
   location: string;
   slug?: string;
   image?: string;
+  imageCredit?: string;
   useGradient?: boolean;
   status: EventStatus;
   type: EventType;
   meetingLink?: string;
+  cancelledReason?: string;
 };
 
 export const events: EventItem[] = [
-    {
+  {
+    id: 13,
+    title: "Collaborator Meeting #7",
+    date: "October 28, 2026",
+    location: "Zoom",
+    status: "past",
+    type: "virtual",
+  },
+  {
+    id: 12,
+    title: "Collaborator Meeting #6",
+    date: "September 30, 2026",
+    location: "Zoom",
+    status: "cancelled",
+    cancelledReason: "NOBUGS 2026",
+    type: "virtual",
+  },
+  {
+    id: 11,
+    title: "Collaborator Meeting #5",
+    date: "August 26, 2026",
+    location: "Zoom",
+    status: "past",
+    type: "virtual",
+  },
+  {
+    id: 10,
+    title: "Collaborator Meeting #4",
+    date: "July 29, 2026",
+    location: "Zoom",
+    status: "past",
+    type: "virtual",
+  },
+  {
     id: 9,
     title: "Collaborator Meeting #3",
     date: "June 24, 2026",
@@ -51,11 +86,12 @@ export const events: EventItem[] = [
   },
   {
     id: 4,
-    title: "AUX 2027, hosted by TBA",
+    title: "AUX 2027, hosted by SLAC",
     date: "February 24–26",
-    location: "TBA",
+    location: "SLAC National Accelerator Laboratory",
     slug: "aux2027",
-    useGradient: true,
+    image: "/slac-event2.jpg",
+    imageCredit: "Olivier Bonin, SLAC National Accelerator Laboratory",
     status: "upcoming",
     type: "in-person",
   },
@@ -76,6 +112,7 @@ export const events: EventItem[] = [
     location: "1 Cyclotron Road, Berkeley, CA",
     slug: "aux2026",
     image: "/AUX2026/aux0.png",
+    imageCredit: "Lawrence Berkeley Nat'l Lab",
     status: "past",
     type: "in-person",
   },
@@ -96,6 +133,7 @@ export const events: EventItem[] = [
     location: "2575 Sand Hill Rd, Menlo Park, CA",
     slug: "aux2025",
     image: "/slac-event.jpg",
+    imageCredit: "Olivier Bonin, SLAC National Accelerator Laboratory",
     status: "past",
     type: "in-person",
   },

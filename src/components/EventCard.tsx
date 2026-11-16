@@ -13,7 +13,8 @@ export default function EventCard({
 }) {
   const inner = (
     <div className="flex items-center gap-4 rounded-xl shadow hover:shadow-lg transition bg-white p-4">
-      <div className="relative w-40 h-28 flex-shrink-0">
+      <div className="w-40 flex-shrink-0">
+        <div className="relative w-full h-28">
         {event.useGradient || !event.image ? (
           <div className="w-full h-full rounded-lg bg-gradient-to-r from-[#1E88B6] to-[#D4B060] flex items-center justify-center">
             {event.type === "virtual" && (
@@ -41,15 +42,32 @@ export default function EventCard({
             className="rounded-lg object-cover"
           />
         )}
+        </div>
+        {event.imageCredit && (
+          <p className="text-[10px] text-gray-400 italic mt-1 text-center">
+            Photo: {event.imageCredit}
+          </p>
+        )}
       </div>
 
-      <div className="flex-1">
-        <p className="text-xl text-gray-600 font-semibold">{event.title}</p>
-        <p className="text-sm text-gray-500 mt-1">{event.date}</p>
-        <p className="text-sm text-gray-500 mt-1">{event.location}</p>
-        {event.slug ? (
+      <div className="flex-1 min-w-0">
+        <p className={`text-xl font-semibold ${event.status === "cancelled" ? "line-through text-gray-400" : "text-gray-600"}`}>
+          {event.title}
+        </p>
+        <p className={`text-sm mt-1 ${event.status === "cancelled" ? "line-through text-gray-400" : "text-gray-500"}`}>
+          {event.date}
+        </p>
+        <p className={`text-sm mt-1 ${event.status === "cancelled" ? "line-through text-gray-400" : "text-gray-500"}`}>
+          {event.location}
+        </p>
+        {event.status === "cancelled" && event.cancelledReason && (
+          <p className="text-sm text-red-400 mt-1">
+            Cancelled — {event.cancelledReason}
+          </p>
+        )}
+        {event.status !== "cancelled" && event.slug ? (
           <p className="text-blue-600 text-sm mt-1">View Event Details →</p>
-        ) : event.meetingLink ? (
+        ) : event.status !== "cancelled" && event.meetingLink ? (
           <p className="text-blue-600 text-sm mt-1">Register / Join Zoom →</p>
         ) : null}
       </div>

@@ -10,7 +10,7 @@ export default function EventsPage() {
 
   const filtered = events.filter((e) => e.type === activeType);
   const upcomingEvents = filtered.filter((e) => e.status === "upcoming");
-  const pastEvents = filtered.filter((e) => e.status === "past");
+  const pastEvents = filtered.filter((e) => e.status === "past" || e.status === "cancelled");
 
   return (
     <main className="bg-white min-h-screen">
