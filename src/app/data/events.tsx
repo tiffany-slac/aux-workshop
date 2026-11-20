@@ -87,7 +87,7 @@ export const events: EventItem[] = [
   {
     id: 4,
     title: "AUX 2027, hosted by SLAC",
-    date: "February 24–26",
+    date: "March 3–5",
     location: "SLAC National Accelerator Laboratory",
     slug: "aux2027",
     image: "/slac-event2.jpg",

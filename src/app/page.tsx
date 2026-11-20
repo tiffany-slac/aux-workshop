@@ -142,7 +142,7 @@ export default function HomePage() {
           AUX Workshop 3
         </h2>
         <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-          02.24.2027 – 02.26.2027 | 3rd Annual Accelerate UX Workshop
+          03.03.2027 – 03.05.2027 | 3rd Annual Accelerate UX Workshop
         </p>
 
         <Link

@@ -12,7 +12,7 @@ export default function Aux2027() {
           3rd Annual Accelerate UX Workshop
         </p>
         <p className="text-sm text-gray-200 mt-2">
-          Feb 24–26, 2027 · Menlo Park, CA
+          Mar 3–5, 2027 · Menlo Park, CA
         </p>
       </section>
 
@@ -92,9 +92,9 @@ export default function Aux2027() {
             <h2 className="text-2xl font-bold">Details</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { label: "Dates", value: "Feb 24–26, 2027" },
+                { label: "Dates", value: "Mar 3–5, 2027" },
                 { label: "Location", value: "SLAC · Menlo Park, CA" },
-                { label: "Registration", value: "Free" },
+                { label: "Indico Page", value: "TBA" },
               ].map((d) => (
                 <div
                   key={d.label}
@@ -118,15 +118,15 @@ export default function Aux2027() {
               <div className="space-y-3">
                 <div>
                   <p className="text-sm text-gray-400">Date</p>
-                  <p className="font-medium">Feb 24–26, 2027</p>
+                  <p className="font-medium">Mar 3–5, 2027</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Location</p>
                   <p className="font-medium">SLAC · Menlo Park, CA</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400">Registration</p>
-                  <p className="font-medium">Free</p>
+                  <p className="text-sm text-gray-400">Indico Page</p>
+                  <p className="font-medium">TBA</p>
                 </div>
               </div>
             </div>
